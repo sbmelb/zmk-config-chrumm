@@ -17,7 +17,7 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPS>;
         };
-    }      
+    };      
 
 
 
