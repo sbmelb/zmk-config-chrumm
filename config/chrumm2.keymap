@@ -23,7 +23,7 @@
 
 
 
-    / {
+   
         keymap {
             compatible = "zmk,keymap";
 
