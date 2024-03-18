@@ -6,9 +6,9 @@ chosen  {
         zmk,matrix_transform = &transform;
     };
 
-// &left_encoder {
-//    status = "okay";
-// };
+&left_encoder {
+   status = "okay";
+};
 
     kscan: kscan {
       compatible = "zmk,kscan-gpio-matrix";
