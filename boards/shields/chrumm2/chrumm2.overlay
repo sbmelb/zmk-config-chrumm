@@ -7,7 +7,6 @@ chosen  {
     };
 
 
-
     kscan: kscan {
       compatible = "zmk,kscan-gpio-matrix";
       label = "KSCAN";
@@ -56,9 +55,4 @@ chosen  {
         >;
     };
 
-  /{
-    &left_encoder {
-    status = "okay";
-    };
-  }
 };
