@@ -8,7 +8,7 @@ chosen  {
 
 //&left_encoder {
 //   status = "okay";
-};
+//};
 
     kscan: kscan {
       compatible = "zmk,kscan-gpio-matrix";
