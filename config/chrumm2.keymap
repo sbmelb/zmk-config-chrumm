@@ -13,12 +13,12 @@
 
     behaviors {
 
-            td0: tap_dance_0 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-               tapping-term-ms = <200>;
-               bindings = <&kp LSHIFT>, <&kp CAPS>;
-            };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp CAPS>;
+        };
        };      
 
 
@@ -44,9 +44,9 @@
                  &kp LCTRL  &kp LALT   &mo 1     &kp SPACE  &kp ENTER                   &kp ENTER   &kp SPACE  &kp BSPC    &mo 3       &kp LEFT    &kp DOWN    &kp RIGHT
                >;
 
-                sensor-bindings = <
-                 &inc_dec_kp UP DOWN
-               >;
+              //  sensor-bindings = <
+              //   &inc_dec_kp UP DOWN
+             //  >;
            };
 
          lower_layer {
