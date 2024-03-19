@@ -1,4 +1,4 @@
-#include "chrumm.dtsi"
+#include "chrumm2.dtsi"
 
 
  kscan: kscan0 {
