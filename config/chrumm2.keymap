@@ -23,7 +23,7 @@
         ht0: hold_tap_0 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
-            flavour = "hold preferred"
+            flavour = "hold preferred";
             tapping-term-ms = <200>;
             bindings = <&kp SPACE>, <&kp RSFT>;
         };
