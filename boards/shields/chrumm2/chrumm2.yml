@@ -1,0 +1,15 @@
+
+file_format: "1"
+id: chrumm2
+name: chrumm2
+type: shield
+url: 
+requires: [nice_nano_v2]
+#exposes: [i2c_oled]
+features:
+  - keys
+  - encoder
+#siblings:
+ # - zodiark_left
+ # - zodiark_right
+
