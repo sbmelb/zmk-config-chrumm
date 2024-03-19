@@ -24,7 +24,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&none>, <&kp RSFT;
+            bindings = <&kp SPACE>, <&none>, <&kp RSFT>;
         };
 
 
