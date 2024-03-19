@@ -40,14 +40,14 @@
         s_dot: ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp DOT>;
+            bindings = <&none &kp S &kp DOT &kp SPACE>;
             label = "SS";
         };
 
         ss_dot: s_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp S &kp DOT>;
+            bindings = <&none &kp S &kp S &kp DOT &kp SPACE>;
             label = "S_DOT";
         };
     };
