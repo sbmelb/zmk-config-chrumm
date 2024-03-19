@@ -20,11 +20,12 @@
             bindings = <&kp LSHIFT>, <&kp CAPS>;
         };
 
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
+        ht0: hold_tap_0 {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
+            flavour = "hold preferred"
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&none>, <&kp RSFT>;
+            bindings = <&kp SPACE>, <&kp RSFT>;
         };
        
        };      
@@ -49,7 +50,7 @@
                  &kp TAB    &kp Q      &kp W     &kp F      &kp P      &kp B            &kp J       &kp L      &kp U       &kp Y       &kp SEMI    &kp LBKT    &kp RBKT
                  &mo 2      &kp A      &kp R     &kp S      &kp T      &kp G            &kp M       &kp N      &kp E       &kp I       &kp O       &kp APOS    &kp NUBS
                  &td0       &kp Z      &kp X     &kp C      &kp D      &kp V            &kp K       &kp H      &kp COMMA   &kp DOT     &kp FSLH    &kp UP      &kp RSFT
-                 &kp LCTRL  &kp LALT   &mo 1     &td1       &kp ENTER                   &kp ENTER   &td1       &kp BSPC    &mo 3       &kp LEFT    &kp DOWN    &kp RIGHT
+                 &kp LCTRL  &kp LALT   &mo 1     &ht0       &kp ENTER                   &kp ENTER   &ht0       &kp BSPC    &mo 3       &kp LEFT    &kp DOWN    &kp RIGHT
                >;
            };
 
