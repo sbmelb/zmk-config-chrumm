@@ -3,5 +3,4 @@ if SHIELD_CHRUMM
 config ZMK_KEYBOARD_NAME
     default "chrumm2"
 
-
 endif
