@@ -49,6 +49,7 @@
             bindings = <&mo>, <&kp>;
 
             tapping-term-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
