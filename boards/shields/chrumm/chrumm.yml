@@ -1,7 +1,7 @@
 
 file_format: "1"
-id: chrumm2
-name: chrumm2
+id: chrumm
+name: chrumm
 type: shield
 url: 
 requires: [nice_nano_v2]
