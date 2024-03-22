@@ -84,14 +84,14 @@
 &bt BT_CLR_ALL  &kp N1          &kp N2  &kp N3                    &kp N4       &kp N5  &kp N6     &kp N7              &kp N8     &kp N9   &kp N0          &kp MINUS  &kp DEL
 &kp TAB         &kp Q           &kp W   &kp F                     &kp P        &kp B   &kp J      &kp L               &kp U      &kp Y    &kp SEMI        &kp LBKT   &kp RBKT
 &mo 2           &hold1 LSHFT A  &kp R   &kp S                     &hold_2 1 T  &kp G   &kp M      &kp N               &kp E      &kp I    &hold1 RSHFT O  &kp APOS   &kp NUBS
-&td0            &kp Z           &kp X   &kp C                     &kp D        &kp V   &kp K      &kp H               &kp COMMA  &kp DOT  &kp FSLH        &kp UP     &kp RS(RIGHT_SHIFT)
+&td0            &kp Z           &kp X   &kp C                     &kp D        &kp V   &kp K      &kp H               &kp COMMA  &kp DOT  &kp FSLH        &kp UP     &kp RIGHT_SHIFT
 &kp LCTRL       &kp LALT        &mo 1   &hold1 RIGHT_SHIFT SPACE  &kp ENTER            &kp ENTER  &hold1 RSHFT SPACE  &kp BSPC   &mo 3    &kp LEFT        &kp DOWN   &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        no_layer {
+        numpad_layer {
             // -------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |       |       |      |      |   /   |   =   |  +  |
             // |       |      |      |      |      |      |       |       |      |      |   7   |   8   |  9  |
@@ -108,7 +108,7 @@
             >;
         };
 
-        fn_layer {
+        function_layer {
             // ---------------------------------------------------------------------------------------------
             // |       |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |  F7   |  F8  |  F9  |  F10  |  F11  |  F12  |
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
