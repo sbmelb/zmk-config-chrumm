@@ -52,10 +52,10 @@
             flavor = "tap-preferred";
         };
 
-        backspc_del: backspc_del {
+        del_backspc: del_backspc {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPC_DEL";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            label = "DEL_BACKSPC";
+            bindings = <&kp DELETE>, <&kp BACKSPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -90,7 +90,7 @@
             // |  LCTR | LALT | MO 1 | SPACE| ENTER|      | ENTER | SPACE | BSPC | MO 3 | LEFT  | DOWN  |  RIGHT|
 
             bindings = <
-&kp ESCAPE  &kp N1          &kp N2  &kp N3                    &kp N4       &kp N5  &kp N6     &kp N7              &kp N8     &kp N9   &kp N0          &kp MINUS  &backspc_del
+&kp ESCAPE  &kp N1          &kp N2  &kp N3                    &kp N4       &kp N5  &kp N6     &kp N7              &kp N8     &kp N9   &kp N0          &kp MINUS  &del_backspc
 &kp TAB     &kp Q           &kp W   &kp F                     &kp P        &kp B   &kp J      &kp L               &kp U      &kp Y    &kp SEMI        &kp LBKT   &kp RBKT
 &mo 2       &hold1 LSHFT A  &kp R   &kp S                     &hold_2 1 T  &kp G   &kp M      &kp N               &kp E      &kp I    &hold1 RSHFT O  &kp APOS   &kp NUBS
 &td0        &kp Z           &kp X   &kp C                     &kp D        &kp V   &kp K      &kp H               &kp COMMA  &kp DOT  &kp FSLH        &kp UP     &kp RIGHT_SHIFT
