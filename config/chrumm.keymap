@@ -94,7 +94,7 @@
 &kp TAB     &kp Q           &kp W   &kp F   &kp P        &kp B   &kp J      &kp L               &kp U      &kp Y    &kp SEMI        &kp LBKT    &kp RBKT
 &mo 2       &hold1 LSHFT A  &kp R   &kp S   &hold_2 1 T  &kp G   &kp M      &kp N               &kp E      &kp I    &hold1 RSHFT O  &kp APOS    &kp NUBS
 &td0        &kp Z           &kp X   &kp C   &kp D        &kp V   &kp K      &kp H               &kp COMMA  &kp DOT  &kp FSLH        &kp UP      &kp RIGHT_SHIFT
-&kp LCTRL   &kp LALT        &none   &none   &none                &kp ENTER  &hold1 RSHFT SPACE  &mo 1      &mo 3    &kp LEFT        &kp DOWN    &kp RIGHT
+&kp LCTRL   &kp LALT        &none   &mo 1   &none                &kp ENTER  &hold1 RSHFT SPACE  &mo 1      &mo 3    &kp LEFT        &kp DOWN    &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
