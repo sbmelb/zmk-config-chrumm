@@ -90,7 +90,7 @@
         Undo: Undo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sk LEFT_CONTROL &kp Z>;
+            bindings = <&macro_press>, <&kp LC(Z)>;
 
             label = "UNDO";
         };
@@ -98,7 +98,7 @@
         redo: redo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&sk LEFT_CONTROL &kp Y>;
+            bindings = <&macro_press>, <&kp LC(Y)>;
 
             label = "REDO";
         };
