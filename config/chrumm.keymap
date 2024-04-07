@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
@@ -91,9 +90,7 @@
         Undo: Undo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kt LEFT_CONTROL &kp Z &kt LEFT_CONTROL>;
+            bindings = <&macro_press>, <&sk LEFT_CONTROL &kp Z>;
 
             label = "UNDO";
         };
@@ -101,9 +98,7 @@
         redo: redo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kt LEFT_CONTROL &kp Y &kt LEFT_CONTROL>;
+            bindings = <&macro_press>, <&sk LEFT_CONTROL &kp Y>;
 
             label = "REDO";
         };
