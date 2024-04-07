@@ -126,7 +126,7 @@
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans        &trans     &kp N0    &kp PERIOD  &kp EQUAL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_VOL_UP2 K_VOL_DN2>;
         };
 
         function_layer {
