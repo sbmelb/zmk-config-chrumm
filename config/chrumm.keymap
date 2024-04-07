@@ -86,22 +86,6 @@
             bindings = <&none &kp S &kp S &kp DOT &kp SPACE>;
             label = "S_DOT";
         };
-
-        Undo: Undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LC(Z)>;
-
-            label = "UNDO";
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LC(Y)>;
-
-            label = "REDO";
-        };
     };
 
     keymap {
@@ -158,7 +142,7 @@
 &trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22  &kp F23       &kp F24
 &trans  &trans   &trans   &ss      &trans   &trans   &trans   &trans   &trans   &trans   &trans   &kp C_MUTE    &kp NUBS
 &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &kp C_VOL_UP  &trans
-&trans  &trans   &trans   &trans   &trans            &trans   &trans   &trans   &trans   &Undo    &kp C_VOL_DN  &redo
+&trans  &trans   &trans   &trans   &trans            &trans   &trans   &trans   &trans   &trans   &kp C_VOL_DN  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
