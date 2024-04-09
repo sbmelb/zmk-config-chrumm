@@ -298,6 +298,13 @@
             bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS>;
             label = "BKT_K";
         };
+
+        bkt_Vic: bkt_Vic {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp LS(V) &kp I &kp C &kp RIGHT_PARENTHESIS &kp SPACE>;
+            label = "BKT_VIC";
+        };
     };
 
     keymap {
@@ -379,11 +386,11 @@
 
         brackets_layer {
             bindings = <
-&trans  &bkt_1  &bkt_2  &bkt_3        &bkt_4  &bkt_5  &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10  &bkt_11  &bkt_12
-&trans  &trans  &trans  &bkt_f        &trans  &bkt_b  &bkt_j  &trans  &trans  &trans        &trans   &trans   &trans
-&trans  &bkt_a  &trans  &td_s_ss_dot  &trans  &bkt_g  &trans  &trans  &bkt_e  &td_i_ii_iii  &trans   &trans   &trans
-&trans  &trans  &trans  &bkt_c        &bkt_d  &trans  &bkt_k  &bkt_h  &trans  &trans        &trans   &trans   &trans
-&trans  &trans  &trans  &trans        &trans          &trans  &trans  &trans  &trans        &trans   &trans   &trans
+&trans  &bkt_1  &bkt_2  &bkt_3        &bkt_4  &bkt_5    &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10  &bkt_11  &bkt_12
+&trans  &trans  &trans  &bkt_f        &trans  &bkt_b    &bkt_j  &trans  &trans  &trans        &trans   &trans   &trans
+&trans  &bkt_a  &trans  &td_s_ss_dot  &trans  &bkt_g    &trans  &trans  &bkt_e  &td_i_ii_iii  &trans   &trans   &trans
+&trans  &trans  &trans  &bkt_c        &bkt_d  &bkt_Vic  &bkt_k  &bkt_h  &trans  &trans        &trans   &trans   &trans
+&trans  &trans  &trans  &trans        &trans            &trans  &trans  &trans  &trans        &trans   &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
