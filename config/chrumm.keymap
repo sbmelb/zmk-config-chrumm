@@ -90,63 +90,63 @@
         s_dot: ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp DOT &kp SPACE>;
+            bindings = <&none &kp S &kp DOT>;
             label = "SS";
         };
 
         ss_dot: s_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp S &kp DOT &kp SPACE>;
+            bindings = <&none &kp S &kp S &kp DOT>;
             label = "S_DOT";
         };
 
         bkt_1: bkt_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp RIGHT_PARENTHESIS>;
             label = "BKT_1";
         };
 
         bkt_2: bkt_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_2 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_2 &kp RIGHT_PARENTHESIS>;
             label = "BKT_2";
         };
 
         bkt_3: bkt_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_3 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_3 &kp RIGHT_PARENTHESIS>;
             label = "BKT_3";
         };
 
         bkt_4: bkt_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_4 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_4 &kp RIGHT_PARENTHESIS>;
             label = "BKT_4";
         };
 
         bkt_5: bkt_5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_5 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_5 &kp RIGHT_PARENTHESIS>;
             label = "BKT_5";
         };
 
         bkt_6: bkt_6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_6 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_6 &kp RIGHT_PARENTHESIS>;
             label = "BKT_6";
         };
 
         bkt_7: bkt_7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_7 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_7 &kp RIGHT_PARENTHESIS>;
             label = "BKT_7";
         };
 
@@ -160,140 +160,140 @@
         bkt_9: bkt_9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_9 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_9 &kp RIGHT_PARENTHESIS>;
             label = "BKT_9";
         };
 
         bkt_10: bkt_10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_0 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_0 &kp RIGHT_PARENTHESIS>;
             label = "BKT_10";
         };
 
         bkt_11: bkt_11 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp RIGHT_PARENTHESIS>;
             label = "BKT_11";
         };
 
         bkt_12: bkt_12 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp RIGHT_PARENTHESIS>;
             label = "BKT_12";
         };
 
         bkt_a: bkt_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp A &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp A &kp RIGHT_PARENTHESIS>;
             label = "BKT_A";
         };
 
         bkt_b: bkt_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp B &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp B &kp RIGHT_PARENTHESIS>;
             label = "BKT_B";
         };
 
         bkt_c: bkt_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp C &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp C &kp RIGHT_PARENTHESIS>;
             label = "BKT_C";
         };
 
         bkt_d: bkt_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp D &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp D &kp RIGHT_PARENTHESIS>;
             label = "BKT_D";
         };
 
         bkt_e: bkt_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp E &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp E &kp RIGHT_PARENTHESIS>;
             label = "BKT_E";
         };
 
         bkt_f: bkt_f {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp F &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp F &kp RIGHT_PARENTHESIS>;
             label = "BKT_F";
         };
 
         bkt_g: bkt_g {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp G &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp G &kp RIGHT_PARENTHESIS>;
             label = "BKT_G";
         };
 
         bkt_h: bkt_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp H &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp H &kp RIGHT_PARENTHESIS>;
             label = "BKT_H";
         };
 
         bkt_i: bkt_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp RIGHT_PARENTHESIS>;
             label = "BKT_I";
         };
 
         bkt_ii: bkt_ii {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp I &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp I &kp RIGHT_PARENTHESIS>;
             label = "BKT_II";
         };
 
         bkt_iii: bkt_iii {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp I &kp I &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp I &kp I &kp RIGHT_PARENTHESIS>;
             label = "BKT_III";
         };
 
         bkt_iv: bkt_iv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp V &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp I &kp V &kp RIGHT_PARENTHESIS>;
             label = "BKT_IV";
         };
 
         bkt_v: bkt_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp RIGHT_PARENTHESIS>;
             label = "BKT_V";
         };
 
         bkt_vi: bkt_vi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp I &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp I &kp RIGHT_PARENTHESIS>;
             label = "BKT_VI";
         };
 
         bkt_j: bkt_j {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS>;
             label = "BKT_J";
         };
 
         bkt_k: bkt_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS &kp SPACE>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS>;
             label = "BKT_K";
         };
     };
