@@ -122,11 +122,11 @@
             label = "BKT_3";
         };
 
-        bkt_4: bkt_3 {
+        bkt_4: bkt_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_PARENTHESIS &kp KP_NUMBER_4 &kp RIGHT_PARENTHESIS &kp SPACE>;
-            label = "BKT_3";
+            label = "BKT_4";
         };
 
         bkt_5: bkt_5 {
@@ -206,11 +206,11 @@
             label = "BKT_C";
         };
 
-        bkt_d: bkt_c {
+        bkt_d: bkt_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_PARENTHESIS &kp D &kp RIGHT_PARENTHESIS &kp SPACE>;
-            label = "BKT_C";
+            label = "BKT_D";
         };
 
         bkt_e: bkt_e {
