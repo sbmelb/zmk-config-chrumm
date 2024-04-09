@@ -377,7 +377,7 @@
             >;
         };
 
-        BRACKETS_LAYER {
+        brAckets_lAyer {
             bindings = <
 &trans  &bkt_1  &bkt_2  &bkt_3        &bkt_4  &bkt_5  &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10  &bkt_11  &bkt_12
 &trans  &trans  &trans  &bkt_f        &trans  &bkt_b  &bkt_j  &trans  &trans  &trans        &trans   &trans   &trans
