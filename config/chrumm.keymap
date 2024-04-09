@@ -389,7 +389,7 @@
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
-        spacing-lqyer {
+        spacing-layer {
             bindings = <
 &trans  &kp LC(F13)  &kp LC(F14)  &kp LC(F15)  &kp LC(F16)  &kp LC(F17)  &kp LC(F18)  &kp LC(F19)  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans
