@@ -305,6 +305,90 @@
             bindings = <&none &kp LEFT_PARENTHESIS &kp LS(V) &kp I &kp C &kp RIGHT_PARENTHESIS &kp SPACE>;
             label = "BKT_VIC";
         };
+
+        kp_13: kp_13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp NUMBER_3 &kp RIGHT_PARENTHESIS>;
+            label = "KP_13";
+        };
+
+        kp_14: kp_14 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp NUMBER_4 &kp RIGHT_PARENTHESIS>;
+            label = "KP_14";
+        };
+
+        kp_15: kp_15 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp N5 &kp RIGHT_PARENTHESIS>;
+            label = "KP_15";
+        };
+
+        kp_16: kp_16 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp NUMBER_6 &kp RIGHT_PARENTHESIS>;
+            label = "KP_16";
+        };
+
+        kp_17: kp_17 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp N7 &kp RIGHT_PARENTHESIS>;
+            label = "KP_17";
+        };
+
+        kp_18: kp_18 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp N8 &kp RIGHT_PARENTHESIS>;
+            label = "KP_18";
+        };
+
+        kp_19: kp_19 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_1 &kp N9 &kp RIGHT_PARENTHESIS>;
+            label = "KP_19";
+        };
+
+        kp_20: kp_20 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_2 &kp N0 &kp RIGHT_PARENTHESIS>;
+            label = "KP_20";
+        };
+
+        kp_21: kp_21 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_2 &kp NUMBER_1 &kp RIGHT_PARENTHESIS>;
+            label = "KP_21";
+        };
+
+        kp_22: kp_22 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_2 &kp NUMBER_2 &kp RIGHT_PARENTHESIS>;
+            label = "KP_22";
+        };
+
+        kp_23: kp_23 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_2 &kp NUMBER_3 &kp RIGHT_PARENTHESIS>;
+            label = "KP_23";
+        };
+
+        kp_24: kp_24 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp NUMBER_2 &kp NUMBER_4 &kp RIGHT_PARENTHESIS>;
+            label = "KP_24";
+        };
     };
 
     keymap {
