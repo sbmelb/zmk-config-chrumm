@@ -11,21 +11,13 @@
 
 / {
     behaviors {
-        td0: tap_dance_0 {
+        td0_shift_cqps: td0_shift_cqps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPS>;
-        };
 
-        hold4: hold4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD4";
-            bindings = <&mo>, <&td0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
+            label = "TD0_SHIFT_CQPS";
         };
 
         td_s_ss_dot: ss {
@@ -42,9 +34,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hold_2: hold_2 {
+        hold_2_mQ_kp: hold_2_mQ_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_2";
+            label = "HOLD_2_MQ_KP";
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
 
@@ -83,6 +75,16 @@
                 <&bkt_iv>,
                 <&bkt_v>,
                 <&bkt_vi>;
+        };
+
+        hqld_1_kp_kp: hqld_1_kp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HQLD_1_KP_KP";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -310,11 +312,11 @@
             // |  LCTR | LALT | MO 1 | SPACE| ENTER|      | ENTER | SPACE | BSPC | MO 3 | LEFT  | DOWN  |  RIGHT|
 
             bindings = <
-&kp ESCAPE  &kp N1          &kp N2             &kp N3  &kp N4       &kp N5  &kp N6     &kp N7              &kp N8             &kp N9   &kp N0          &kp DELETE  &kp BACKSPACE
-&kp TAB     &kp Q           &kp W              &kp F   &kp P        &kp B   &kp J      &kp L               &kp U              &kp Y    &kp SEMI        &kp LBKT    &kp RBKT
-&mo 2       &hold4 LSHFT A  &kp R              &kp S   &hold_2 1 T  &kp G   &kp M      &kp N               &kp E              &kp I    &hold4 RSHFT O  &kp APOS    &kp MINUS
-&td0        &kp Z           &kp X              &kp C   &kp D        &kp V   &kp K      &kp H               &kp COMMA          &kp DOT  &kp FSLH        &kp UP      &kp RIGHT_SHIFT
-&kp LCTRL   &kp LALT        &hold_3_mo_sl 4 4  &none   &mo 1                &kp ENTER  &hold4 RSHFT SPACE  &hold_3_mo_sl 1 1  &mo 3    &kp LEFT        &kp DOWN    &kp RIGHT
+&kp ESCAPE       &kp N1                     &kp N2             &kp N3  &kp N4             &kp N5  &kp N6     &kp N7                     &kp N8             &kp N9   &kp N0                       &kp DELETE  &kp BACKSPACE
+&kp TAB          &kp Q                      &kp W              &kp F   &kp P              &kp B   &kp J      &kp L                      &kp U              &kp Y    &kp SEMI                     &kp LBKT    &kp RBKT
+&mo 2            &hqld_1_kp_kp LSHFT LS(A)  &kp R              &kp S   &hold_2_mQ_kp 1 T  &kp G   &kp M      &kp N                      &kp E              &kp I    &hqld_1_kp_kp RIGHT_SHIFT O  &kp APOS    &kp MINUS
+&td0_shift_cqps  &kp Z                      &kp X              &kp C   &kp D              &kp V   &kp K      &kp H                      &kp COMMA          &kp DOT  &kp FSLH                     &kp UP      &kp RIGHT_SHIFT
+&kp LCTRL        &kp LALT                   &hold_3_mo_sl 4 4  &none   &mo 1                      &kp ENTER  &hqld_1_kp_kp RSHFT SPACE  &hold_3_mo_sl 1 1  &mo 3    &kp LEFT                     &kp DOWN    &kp RIGHT
             >;
 
             sensor-bindings = <&rot_kp LEFT RIGHT>;
@@ -385,6 +387,16 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+        };
+
+        spqcing-lqyer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
