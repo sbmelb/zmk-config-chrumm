@@ -429,7 +429,7 @@
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans        &trans     &kp N0    &kp PERIOD  &kp EQUAL
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&rot_kp LA(LC(M)) LA(LC(K))>;
         };
 
         function_layer {
@@ -448,7 +448,7 @@
 &trans  &trans   &trans   &trans        &trans            &trans   &trans   &trans   &trans   &kp LC(Z)  &kp C_VOL_DN  &kp LC(Y)
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&rot_kp LA(LC(M)) LA(LC(K))>;
         };
 
         bt_layer {
