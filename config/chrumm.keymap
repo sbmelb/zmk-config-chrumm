@@ -78,15 +78,6 @@
             flavor = "tap-preferred";
         };
 
-        shift_caps: shift_caps {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_CAPS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&dt_caps>;
-        };
-
         dt_caps: dt_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "DT_CAPS";
@@ -413,7 +404,7 @@
 &kp ESCAPE  &kp N1                 &kp N2             &kp N3             &kp N4             &kp N5  &kp N6     &kp N7                     &kp N8             &kp N9   &kp N0                       &kp DELETE  &kp BACKSPACE
 &kp TAB     &kp Q                  &kp W              &kp F              &kp P              &kp B   &kp J      &kp L                      &kp U              &kp Y    &kp SEMI                     &kp LBKT    &kp RBKT
 &mo 2       &hold_1_kp_kp LSHFT A  &kp R              &kp S              &hold_2_mo_kp 1 T  &kp G   &kp M      &kp N                      &kp E              &kp I    &hold_1_kp_kp RIGHT_SHIFT O  &kp APOS    &kp MINUS
-&kp LSHFT   &hold_2_mo_kp 4 Z      &kp X              &kp C              &kp D              &kp V   &kp K      &kp H                      &kp COMMA          &kp DOT  &hold_2_mo_kp 4 SLASH        &kp UP      &kp RIGHT_SHIFT
+&dt_caps    &hold_2_mo_kp 4 Z      &kp X              &kp C              &kp D              &kp V   &kp K      &kp H                      &kp COMMA          &kp DOT  &hold_2_mo_kp 4 SLASH        &kp UP      &kp RIGHT_SHIFT
 &kp LCTRL   &kp LALT               &hold_3_mo_sl 4 4  &hold_3_mo_sl 5 5  &mo 1                      &kp ENTER  &hold_1_kp_kp RSHFT SPACE  &hold_3_mo_sl 1 1  &mo 3    &kp LEFT                     &kp DOWN    &kp RIGHT
             >;
 
