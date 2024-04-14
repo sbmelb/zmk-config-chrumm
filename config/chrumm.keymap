@@ -129,6 +129,13 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        td_1_fslash: td_1_fslash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_1_FSLASH";
+            #binding-cells = <0>;
+            bindings = <&kp KP_NUMBER_1>, <&kp FSLH>;
+        };
     };
 
     macros {
@@ -465,11 +472,11 @@
             // |       |      |      |      |      |      |       |       |      |      |   0   |   .   |  =  |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ASTERISK  &kp UNDER  &kp FSLH  &kp PLUS    &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N7    &kp N8      &kp N9
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N4    &kp N5      &kp N6
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N1    &kp N2      &kp N3
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans        &trans     &kp N0    &kp PERIOD  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ASTERISK  &kp UNDER  &kp FSLH      &kp PLUS    &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N7        &kp N8      &kp N9
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N4        &kp N5      &kp N6
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &td_1_fslash  &kp N2      &kp N3
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans        &trans     &kp N0        &kp PERIOD  &kp EQUAL
             >;
 
             sensor-bindings = <&rot_kp LA(LC(M)) LA(LC(K))>;
