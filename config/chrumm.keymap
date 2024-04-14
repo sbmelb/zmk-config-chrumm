@@ -134,20 +134,6 @@
             bindings = <&sk LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        td_1_fslash: td_1_fslash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_1_FSLASH";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>, <&kp FSLH>;
-        };
-
-        td_6_dash: td_6_dash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_6_DASH";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_6>, <&kp KP_SUBTRACT>, <&kp UNDER>;
-        };
-
         dt_semi_full_colon: dt_semi_full_colon {
             compatible = "zmk,behavior-tap-dance";
             label = "DT_SEMI_FULL_COLON";
