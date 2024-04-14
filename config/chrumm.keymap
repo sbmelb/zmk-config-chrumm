@@ -114,6 +114,8 @@
             label = "DT_9_LBKT";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LEFT_PARENTHESIS>;
+
+            tapping-term-ms = <150>;
         };
 
         dt_0_rbkt: dt_0_rbkt {
@@ -121,6 +123,8 @@
             label = "DT_0_RBKT";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp RIGHT_PARENTHESIS>;
+
+            tapping-term-ms = <150>;
         };
 
         td_sk_shift_caps: td_sk_shift_caps {
