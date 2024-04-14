@@ -134,14 +134,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_1_FSLASH";
             #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_1>, <&kp FSLH>;
+            bindings = <&kp NUMBER_1>, <&kp FSLH>;
         };
 
         td_6_dash: td_6_dash {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_6_DASH";
             #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_6>, <&kp KP_SUBTRACT>, <&kp UNDER>;
+            bindings = <&kp NUMBER_6>, <&kp KP_SUBTRACT>, <&kp UNDER>;
         };
     };
 
