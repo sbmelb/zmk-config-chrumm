@@ -92,7 +92,7 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         dt_quotes: dt_quotes {
