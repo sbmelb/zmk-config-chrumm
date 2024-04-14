@@ -92,7 +92,7 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
         };
 
         dt_quotes: dt_quotes {
