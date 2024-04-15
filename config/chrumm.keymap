@@ -140,6 +140,24 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp COLON>;
         };
+
+        dt_6_dash: dt_6_dash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_6_DASH";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp MINUS>;
+
+            tapping-term-ms = <160>;
+        };
+
+        dt_1_fslash: dt_1_fslash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_1_FSLASH";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp SLASH>;
+
+            tapping-term-ms = <160>;
+        };
     };
 
     macros {
@@ -478,8 +496,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ASTERISK  &kp UNDER  &kp FSLH      &kp PLUS    &kp KP_MINUS
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N7        &kp N8      &kp N9
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N4        &kp N5      &kp NUMBER_6
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp NUMBER_1  &kp N2      &kp N3
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &kp N4        &kp N5      &dt_6_dash
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &dt_1_fslash  &kp N2      &kp N3
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans        &trans     &kp N0        &kp PERIOD  &kp EQUAL
             >;
 
