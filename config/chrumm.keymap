@@ -353,11 +353,11 @@
             label = "BKT_IV";
         };
 
-        bkt_v_roman: bkt_v {
+        bkt_v_roman: bkt_v_roman {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp RIGHT_PARENTHESIS>;
-            label = "BKT_V";
+            label = "BKT_V_ROMAN";
         };
 
         bkt_vi: bkt_vi {
