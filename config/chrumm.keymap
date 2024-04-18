@@ -64,7 +64,7 @@
                 <&bkt_ii>,
                 <&bkt_iii>,
                 <&bkt_iv>,
-                <&bkt_v>,
+                <&bkt_v_roman>,
                 <&bkt_vi>;
         };
 
@@ -166,7 +166,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DT_BKT_V_BKT_VIC";
             #binding-cells = <0>;
-            bindings = <&bkt_v>, <&bkt_Vic>;
+            bindings = <&bkt_v_roman>, <&bkt_Vic>;
         };
     };
 
@@ -353,7 +353,7 @@
             label = "BKT_IV";
         };
 
-        bkt_v: bkt_v {
+        bkt_v_roman: bkt_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LEFT_PARENTHESIS &kp V &kp RIGHT_PARENTHESIS>;
