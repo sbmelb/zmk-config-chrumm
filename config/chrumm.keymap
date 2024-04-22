@@ -44,11 +44,11 @@
             mods = <(MOD_LSFT)>;
         };
 
-        hold_3_mo_sl: hold_3_mo_sl {
+        hold_3_mo_tl: hold_3_mo_tl {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_3_MO_SL";
+            label = "HOLD_3_MO_TL";
             #binding-cells = <2>;
-            bindings = <&mo>, <&sl>;
+            bindings = <&mo>, <&tog>;
 
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
@@ -503,7 +503,7 @@
 &kp TAB         &kp Q                  &kp W              &kp F              &kp P              &kp B   &kp J      &kp L                                &kp U              &kp Y    &dt_semi_full_colon          &dt_l_brackets  &dt_r_brackets
 &mo 2           &hold_1_kp_kp LSHFT A  &kp R              &kp S              &hold_2_mo_kp 1 T  &kp G   &kp M      &kp N                                &kp E              &kp I    &hold_1_kp_kp RIGHT_SHIFT O  &dt_quotes      &dt_dash_underscore
 &dt_shift_caps  &hold_2_mo_kp 4 Z      &kp X              &kp C              &kp D              &kp V   &kp K      &kp H                                &kp COMMA          &kp DOT  &hold_2_mo_kp 4 SLASH        &kp UP          &dt_shift_caps
-&kp LCTRL       &kp LALT               &hold_3_mo_sl 4 4  &hold_3_mo_sl 5 5  &mo 1                      &kp ENTER  &hold_space_shift RIGHT_SHIFT SPACE  &hold_3_mo_sl 1 1  &mo 3    &kp LEFT                     &kp DOWN        &kp RIGHT
+&kp LCTRL       &kp LALT               &hold_3_mo_tl 4 4  &hold_3_mo_tl 5 5  &mo 1                      &kp ENTER  &hold_space_shift RIGHT_SHIFT SPACE  &hold_3_mo_tl 1 1  &mo 3    &kp LEFT                     &kp DOWN        &kp RIGHT
             >;
 
             sensor-bindings = <&rot_kp LEFT RIGHT>;
