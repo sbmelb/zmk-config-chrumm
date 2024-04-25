@@ -509,6 +509,21 @@
             bindings = <&kp EQUAL>;
             key-positions = <6 7>;
         };
+
+        chord_plus {
+            bindings = <&kp PLUS>;
+            key-positions = <11 12>;
+        };
+
+        chord_forwardslash {
+            bindings = <&kp FSLH>;
+            key-positions = <10 11>;
+        };
+
+        chord_asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <8 9>;
+        };
     };
 
     keymap {
