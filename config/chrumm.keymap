@@ -524,6 +524,11 @@
             bindings = <&kp ASTERISK>;
             key-positions = <8 9>;
         };
+
+        chord_questionmark {
+            bindings = <&kp QUESTION>;
+            key-positions = <7 8>;
+        };
     };
 
     keymap {
