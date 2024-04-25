@@ -487,6 +487,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        chord_colon {
+            bindings = <&kp COLON>;
+            key-positions = <19 20>;
+        };
+
+        chord_dash {
+            bindings = <&kp MINUS>;
+            key-positions = <32 33>;
+        };
+
+        chord_quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <45 46>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
