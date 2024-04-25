@@ -549,6 +549,16 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <21 22>;
         };
+
+        chord_underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <9 10>;
+        };
+
+        chord_doublequotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <46 47>;
+        };
     };
 
     keymap {
