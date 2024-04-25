@@ -539,6 +539,16 @@
             bindings = <&kp QUESTION>;
             key-positions = <7 8>;
         };
+
+        chord_leftbracket {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <20 21>;
+        };
+
+        chord_rightbracket {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <21 22>;
+        };
     };
 
     keymap {
