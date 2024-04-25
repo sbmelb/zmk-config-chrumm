@@ -569,6 +569,11 @@
             bindings = <&kp SLASH>;
             key-positions = <49 50>;
         };
+
+        chord_exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
