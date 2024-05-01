@@ -592,6 +592,12 @@
             key-positions = <62 63>;
             layers = <0 4>;
         };
+
+        Chord_at {
+            bindings = <&kp LC(AT_SIGN)>;
+            key-positions = <62 63 2 3>;
+            layers = <0 4>;
+        };
     };
 
     keymap {
