@@ -656,7 +656,7 @@
 &trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans        &trans     &kp N0        &kp PERIOD  &kp EQUAL
             >;
 
-            sensor-bindings = <&rot_kp LA(LC(M)) LA(LC(K))>;
+            sensor-bindings = <&rot_kp LEFT_ARROW RIGHT>;
         };
 
         function_layer {
