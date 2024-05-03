@@ -499,7 +499,7 @@
         euro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(KP_NUMBER_4))>;
+            bindings = <&kp LA(LC(E))>;
             label = "NEW_MACRO";
         };
 
