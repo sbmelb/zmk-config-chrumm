@@ -499,15 +499,15 @@
         euro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_8 &kp KP_NUMBER_3 &kp KP_NUMBER_6 &kp KP_NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
+            bindings = <&kp LA(LC(KP_NUMBER_4))>;
             label = "NEW_MACRO";
+        };
+
+        gbp: gbp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(P))>;
+            label = "GBP";
         };
     };
 
@@ -633,7 +633,13 @@
 
         chord_euro {
             bindings = <&euro>;
-            key-positions = <22 23>;
+            key-positions = <35 36>;
+            layers = <0 4>;
+        };
+
+        chord_gbp {
+            bindings = <&gbp>;
+            key-positions = <23 22>;
             layers = <0 4>;
         };
     };
@@ -669,11 +675,11 @@
             // |       |      |      |      |      |      |       |       |      |      |   0   |   .   |  =  |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp ASTERISK  &kp MINUS  &kp SLASH        &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp KP_NUMBER_7  &kp KP_N8   &kp KP_NUMBER_9
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp KP_N4        &kp KP_N5   &kp KP_NUMBER_6
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp KP_N1        &kp KP_N2   &kp KP_N3
-&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans        &trans     &kp KP_N0        &kp KP_DOT  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp ASTERISK  &kp MINUS  &kp SLASH     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_7  &kp N8        &kp N9
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans        &trans     &kp N0        &kp PERIOD    &kp EQUAL
             >;
 
             sensor-bindings = <&rot_kp LEFT_ARROW RIGHT>;
