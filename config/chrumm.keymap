@@ -657,7 +657,7 @@
         chord_euro {
             bindings = <&euro>;
             key-positions = <35 36>;
-            layers = <0 4>;
+            timeout-ms = <30>;
         };
 
         chord_gbp {
