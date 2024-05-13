@@ -736,6 +736,7 @@
         };
 
         numpad_layer {
+            display-name = "numpad_layer";
             // -------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |       |       |      |      |   /   |   =   |  +  |
             // |       |      |      |      |      |      |       |       |      |      |   7   |   8   |  9  |
@@ -755,6 +756,7 @@
         };
 
         function_layer {
+            display-name = "function_layer";
             // ---------------------------------------------------------------------------------------------
             // |       |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |  F7   |  F8  |  F9  |  F10  |  F11  |  F12  |
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
@@ -774,6 +776,7 @@
         };
 
         bt_layer {
+            display-name = "bt_layer";
             // --------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
@@ -791,6 +794,7 @@
         };
 
         brackets_layer {
+            display-name = "brackets_layer";
             bindings = <
 &trans  &bkt_1  &bkt_2  &bkt_3             &bkt_4  &bkt_5             &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10      &bkt_11  &bkt_12
 &trans  &trans  &trans  &bkt_f             &trans  &bkt_b             &bkt_j  &trans  &trans  &trans        &trans       &trans   &trans
@@ -803,6 +807,7 @@
         };
 
         spacing-layer {
+            display-name = "spacing_layer";
             bindings = <
 &trans  &kp LC(F13)  &none   &kp LC(F14)  &none   &none   &kp LC(F15)  &none   &kp LC(F16)  &trans  &trans       &trans  &kp LC(F17)
 &trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &kp LC(F18)  &trans  &trans       &trans  &kp LC(F19)
