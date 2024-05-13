@@ -731,6 +731,7 @@
             >;
 
             sensor-bindings = <&rot_kp LEFT RIGHT>;
+            label = "colemak_layer";
         };
 
         numpad_layer {
