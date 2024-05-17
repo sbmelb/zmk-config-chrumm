@@ -532,6 +532,41 @@
 
             label = "GBP";
         };
+
+        bkt_l: bkt_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp L &kp RIGHT_PARENTHESIS>;
+            label = "BKT_L";
+        };
+
+        bkt_m: bkt_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp M &kp RIGHT_PARENTHESIS>;
+            label = "BKT_M";
+        };
+
+        bkt_n: bkt_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS>;
+            label = "BKT_N";
+        };
+
+        bkt_o: bkt_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp O &kp RIGHT_PARENTHESIS>;
+            label = "BKT_O";
+        };
+
+        bkt_p: bkt_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp P &kp RIGHT_PARENTHESIS>;
+            label = "BKT_P";
+        };
     };
 
     combos {
@@ -716,6 +751,7 @@
 
         colemak_layer {
             display-name = "colemak_layer";
+
             // --------------------------------------------------------------------------------------------------
             // |  ESC  |  1   |  2   |  3   |  4   |  5   |   6   |  7    |  8   |  9   |   0   | MINUS |  DEL |
             // |  TAB  |  Q   |  W   |  F   |  P   |  B   |   J   |  L    |  U   |  Y   |   ;   | LBKT  |  RBKT |
@@ -737,6 +773,7 @@
 
         numpad_layer {
             display-name = "numpad_layer";
+
             // -------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |       |       |      |      |   /   |   =   |  +  |
             // |       |      |      |      |      |      |       |       |      |      |   7   |   8   |  9  |
@@ -757,6 +794,7 @@
 
         function_layer {
             display-name = "function_layer";
+
             // ---------------------------------------------------------------------------------------------
             // |       |  F1  |  F2  |  F3  |  F4  |  F5  |  F6   |  F7   |  F8  |  F9  |  F10  |  F11  |  F12  |
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
@@ -777,6 +815,7 @@
 
         bt_layer {
             display-name = "bt_layer";
+
             // --------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
@@ -797,8 +836,8 @@
             display-name = "brackets_layer";
             bindings = <
 &trans  &bkt_1  &bkt_2  &bkt_3             &bkt_4  &bkt_5             &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10      &bkt_11  &bkt_12
-&trans  &trans  &trans  &bkt_f             &trans  &bkt_b             &bkt_j  &trans  &trans  &trans        &trans       &trans   &trans
-&trans  &bkt_a  &trans  &td_s_ss_dot       &trans  &bkt_g             &trans  &trans  &bkt_e  &td_i_ii_iii  &trans       &trans   &trans
+&trans  &trans  &trans  &bkt_f             &bkt_p  &bkt_b             &bkt_j  &bkt_l  &trans  &trans        &trans       &trans   &trans
+&trans  &bkt_a  &trans  &td_s_ss_dot       &trans  &bkt_g             &bkt_m  &bkt_n  &bkt_e  &td_i_ii_iii  &bkt_o       &trans   &trans
 &trans  &trans  &trans  &td_bkt_c_bkt_cth  &bkt_d  &dt_bkt_v_bkt_vic  &bkt_k  &bkt_h  &trans  &trans        &trans       &trans   &trans
 &trans  &trans  &trans  &trans             &trans                     &trans  &trans  &trans  &trans        &kp LC(F23)  &trans   &kp LC(F24)
             >;
