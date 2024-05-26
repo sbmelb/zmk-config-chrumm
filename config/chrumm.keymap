@@ -387,7 +387,7 @@
         bkt_k: bkt_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_PARENTHESIS &kp J &kp RIGHT_PARENTHESIS>;
+            bindings = <&none &kp LEFT_PARENTHESIS &kp K &kp RIGHT_PARENTHESIS>;
             label = "BKT_K";
         };
 
