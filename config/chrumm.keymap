@@ -645,14 +645,14 @@
         chord_leftbracket {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <20 21>;
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         chord_rightbracket {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <21 22>;
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
