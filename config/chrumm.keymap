@@ -741,7 +741,7 @@
 
         chord_euro {
             bindings = <&euro>;
-            key-positions = <35 34>;
+            key-positions = <14 15>;
             timeout-ms = <30>;
             layers = <0>;
         };
