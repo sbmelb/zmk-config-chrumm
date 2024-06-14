@@ -786,7 +786,7 @@
 &kp TAB         &kp Q              &kp W   &kp F   &kp P              &kp B   &kp J      &kp L                                &kp U      &kp Y    &dt_dash_underscore  &dt_l_brackets  &dt_r_brackets
 &mo 2           &kp A              &kp R   &kp S   &hold_2_mo_kp 1 T  &kp G   &kp M      &kp N                                &kp E      &kp I    &kp O                &dt_quotes      &dt_semi_full_colon
 &dt_shift_caps  &hold_2_mo_kp 4 Z  &kp X   &kp C   &kp D              &kp V   &kp K      &kp H                                &kp COMMA  &kp DOT  &kp SLASH            &kp UP          &dt_shift_caps
-&kp LCTRL       &kp LALT           &mo 2   &mo 1   &mo 4                      &kp ENTER  &hold_space_shift RIGHT_SHIFT SPACE  &mo 1      &mo 3    &kp LEFT             &kp DOWN        &kp RIGHT
+&kp LCTRL       &kp LALT           &mo 2   &none   &mo 1                      &kp ENTER  &hold_space_shift RIGHT_SHIFT SPACE  &mo 4      &mo 3    &kp LEFT             &kp DOWN        &kp RIGHT
             >;
 
             sensor-bindings = <&rot_kp LEFT RIGHT>;
