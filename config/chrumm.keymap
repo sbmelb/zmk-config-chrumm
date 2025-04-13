@@ -173,7 +173,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_CAPS_SHIFT";
             #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&sk>;
 
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
@@ -189,14 +189,14 @@
     };
 
     macros {
-        s_dot: ss {
+        s_dot: s_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp S &kp SPACE>;
             label = "SS";
         };
 
-        ss_dot: s_dot {
+        ss_dot: ss_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp S &kp S &kp SPACE>;
@@ -504,21 +504,6 @@
             label = "BKT_V";
         };
 
-        euro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_8 &kp KP_NUMBER_3 &kp KP_NUMBER_6 &kp KP_NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>;
-
-            label = "NEW_MACRO";
-        };
-
         clr: clr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -583,13 +568,6 @@
             label = "BKT_AA";
         };
 
-        zotero_citation: zotero_citation {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(Z)>;
-            label = "ZOTERO_CITATION";
-        };
-
         mo_1_enun: mo_1_enun {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -597,12 +575,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(F13)>,
+                <&kp LG(LC(LA(F13)))>,
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LG(F13) &mo 1>,
+                <&kp LG(LC(LA(F13))) &mo 1>,
                 <&macro_tap>;
 
             label = "MO_1_ENUN";
@@ -615,12 +593,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(F14)>,
+                <&kp LG(LC(LA(F14)))>,
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LG(F14) &mo 2>,
+                <&kp LG(LC(LA(F14))) &mo 2>,
                 <&macro_tap>;
 
             label = "MO_2_ENUN";
@@ -633,12 +611,12 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(F15)>,
+                <&kp LG(LC(LA(F15)))>,
                 <&macro_press>,
                 <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LG(F15) &mo 3>,
+                <&kp LG(LC(LA(F15))) &mo 3>,
                 <&macro_tap>;
 
             label = "MO_3_ENUN";
@@ -651,16 +629,266 @@
             tap-ms = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(F17)>,
+                <&kp LG(LC(LA(F17)))>,
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LG(F17) &mo 4>,
+                <&kp LG(LC(LA(F17))) &mo 4>,
                 <&macro_tap>;
 
             label = "MO_4_ENUN";
         };
+
+        mo_5_enun: mo_5_enun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(LC(LA(F18)))>,
+                <&macro_press>,
+                <&mo 5>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LG(LC(LA(F18))) &mo 5>,
+                <&macro_tap>;
+
+            label = "MO_5_ENUN";
+        };
+
+        mo_6_enun: mo_6_enun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(LC(LA(F19)))>,
+                <&macro_press>,
+                <&mo 6>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LG(LC(LA(F19))) &mo 6>,
+                <&macro_tap>;
+
+            label = "MO_6_ENUN";
+        };
+
+        unicode_emdash: unicode_emdash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "UNICODE_EMDASH";
+        };
+
+        dash_list: dash_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F18)>;
+            label = "DASH_LIST";
+        };
+
+        dot_list: dot_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F19)>;
+            label = "DOT_LIST";
+        };
+
+        alpha_dash_list: alpha_dash_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(A)>;
+            label = "ALPHA_DASH_LIST";
+        };
+
+        num_dash_list: num_dash_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(Y)>;
+            label = "NUM_DASH_LIST";
+        };
+
+        statute_list: statute_list {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(S)>;
+            label = "STATUTE_LIST";
+        };
+
+        statute_list_2: statute_list_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(R)>;
+            label = "STATUTE_LIST_2";
+        };
+
+        list_A_1_i: list_A_1_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(A))>;
+            label = "LIST_A_1_I";
+        };
+
+        clear_formatting: clear_formatting {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(S)>;
+            label = "CLEAR_FORMATTING";
+        };
+
+        safe_paste: safe_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(T))>;
+            label = "SAFE_PASTE";
+        };
+
+        indent_left: indent_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F23)>;
+            label = "INDENT_LEFT";
+        };
+
+        indent_right: indent_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F24)>;
+            label = "INDENT_RIGHT";
+        };
+
+        quotes: quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(W))>;
+            label = "QUOTES";
+        };
+
+        square_brackets: square_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LEFT_BRACKET))>;
+            label = "SQUARE_BRACKETS";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(N9))>;
+            label = "BRACKETS";
+        };
+
+        caps: caps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F3)>;
+            label = "CAPS";
+        };
+
+        underline: underline {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(U)>;
+            label = "UNDERLINE";
+        };
+
+        bold: bold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B)>;
+            label = "BOLD";
+        };
+
+        italic: italic {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(I)>;
+            label = "ITALIC";
+        };
+
+        highlight: highlight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(H))>;
+            label = "HIGHLIGHT";
+        };
+
+        key_point: key_point {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(I))>;
+            label = "KEY_POINT";
+        };
+
+        euro: euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_8 &kp KP_NUMBER_3 &kp KP_NUMBER_6 &kp KP_NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "EURO";
+        };
+
+        fix_paras_in_copied_text: fix_paras_in_copied_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp DELETE>;
+            label = "FIX_PARAS_IN_COPIED_TEXT";
+        };
+
+        //   mo_2_enun: mo_2_enun {
+        //       compatible = "zmk,behavior-macro";
+        //      #binding-cells = <0>;
+        //      wait-ms = <0>;
+        //       tap-ms = <0>;
+        //       bindings
+        //          = <&macro_press &mo 2>
+        //          , <&macro_tap &kp LS(F16)>
+        //          , <&macro_pause_for_release>
+        //         , <&macro_release &mo 2>;
+        //      label = "MO_2_ENUN";
+        //  };
+        //   mo_3_enun: mo_3_enun {
+        //      compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //      wait-ms = <0>;
+        //      tap-ms = <0>;
+        //       bindings
+        //          = <&macro_press &mo 3>
+        //           , <&macro_tap &kp LS(F17)>
+        //          , <&macro_pause_for_release>
+        //           , <&macro_release &mo 3>;
+        //       label = "MO_3_ENUN";
+        //   };
+        //  mo_4_enun: mo_4_enun {
+        //      compatible = "zmk,behavior-macro";
+        //      #binding-cells = <0>;
+        //      wait-ms = <0>;
+        //       tap-ms = <0>;
+        //       bindings
+        //          = <&macro_press &mo 4>
+        //          , <&macro_tap &kp LS(F18)>
+        //           , <&macro_pause_for_release>
+        //            , <&macro_release &mo 4>;
+        //        label = "MO_4_ENUN";
+        //   };
     };
 
     combos {
@@ -723,15 +951,15 @@
 
         chord_leftbracket {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 10>;
-            timeout-ms = <50>;
+            key-positions = <>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         chord_rightbracket {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 11>;
-            timeout-ms = <50>;
+            key-positions = <>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
@@ -854,11 +1082,11 @@
             // |  LCTR | LALT | MO 1 | SPACE| ENTER|      | ENTER | SPACE | BSPC | MO 3 | LEFT  | DOWN  |  RIGHT|
 
             bindings = <
-&kp ESCAPE      &kp N1                     &kp N2      &kp N3      &kp N4     &kp N5  &kp N6                               &kp N7  &kp N8      &kp N9      &kp N0                    &kp DELETE      &kp BACKSPACE
-&kp TAB         &kp Q                      &kp W       &kp F       &kp P      &kp B   &kp J                                &kp L   &kp U       &kp Y       &dt_dash_underscore       &dt_l_brackets  &dt_r_brackets
-&mo_2_enun      &hold_caps_shift LSHIFT A  &kp R       &kp S       &kp T      &kp G   &kp M                                &kp N   &kp E       &kp I       &hold_caps_shift RSHFT O  &dt_quotes      &dt_semi_full_colon
-&dt_shift_caps  &kp Z                      &kp X       &kp C       &kp D      &kp V   &kp K                                &kp H   &kp COMMA   &kp DOT     &kp SLASH                 &kp UP          &dt_shift_caps
-&kp LCTRL       &kp LALT                   &mo_2_enun  &mo_1_enun  &kp ENTER          &hold_space_shift RIGHT_SHIFT SPACE  &none   &mo_4_enun  &mo_3_enun  &kp LEFT                  &kp DOWN        &kp RIGHT
+&kp ESCAPE      &kp N1    &kp N2      &kp N3      &kp N4     &kp N5  &kp N6                               &kp N7      &kp N8      &kp N9      &kp N0               &kp DELETE      &kp BACKSPACE
+&kp TAB         &kp Q     &kp W       &kp F       &kp P      &kp B   &kp J                                &kp L       &kp U       &kp Y       &dt_dash_underscore  &dt_l_brackets  &dt_r_brackets
+&mo_2_enun      &kp A     &kp R       &kp S       &kp T      &kp G   &kp M                                &kp N       &kp E       &kp I       &kp O                &dt_quotes      &dt_semi_full_colon
+&dt_shift_caps  &kp Z     &kp X       &kp C       &kp D      &kp V   &kp K                                &kp H       &kp COMMA   &kp DOT     &kp FSLH             &kp UP          &kp RIGHT_SHIFT
+&kp LCTRL       &kp LALT  &mo_6_enun  &mo_1_enun  &kp ENTER          &hold_space_shift RIGHT_SHIFT SPACE  &mo_5_enun  &mo_4_enun  &mo_3_enun  &kp LEFT             &kp DOWN        &kp RIGHT
             >;
 
             sensor-bindings = <&rot_kp LEFT RIGHT>;
@@ -876,17 +1104,17 @@
             // |       |      |      |      |      |      |       |       |      |      |   0   |   .   |  =  |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp ASTERISK  &kp MINUS  &kp SLASH     &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_7  &kp N8        &kp N9
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans        &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans        &trans     &kp N0        &kp PERIOD    &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans  &kp PLUS  &kp UNDER  &kp ASTERISK  &kp MINUS  &kp SLASH     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans        &trans     &kp NUMBER_7  &kp N8        &kp N9
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans        &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans        &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+&trans  &trans  &trans  &trans  &trans          &trans    &trans     &trans        &trans     &kp N0        &kp PERIOD    &kp EQUAL
             >;
 
-            sensor-bindings = <&rot_kp LEFT_ARROW RIGHT>;
+            sensor-bindings = <&rot_kp LEFT RIGHT>;
         };
 
-        function_layer {
+        function_key_layer {
             display-name = "function_layer";
 
             // ---------------------------------------------------------------------------------------------
@@ -897,14 +1125,14 @@
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
 
             bindings = <
-&trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &zotero_citation  &trans  &clr    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_WIN  &trans            &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TILDE     &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+&trans        &kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22  &kp F23  &kp F24
+&trans        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+&trans        &trans   &trans   &clr     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+&kp LEFT_GUI  &trans   &trans   &trans   &trans            &trans   &trans   &trans   &trans   &trans   &trans   &trans
             >;
 
-            sensor-bindings = <&rot_kp LEFT_ARROW RIGHT_ARROW>;
+            sensor-bindings = <&rot_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         bt_layer {
@@ -918,7 +1146,7 @@
             // |       |      |      |      |      |      |       |       |      |      |       |       |       |
 
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &trans        &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &trans        &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
 &bootloader  &trans        &trans        &trans        &trans        &trans        &out OUT_BLE  &out OUT_USB  &trans  &trans  &trans  &trans  &trans
 &sys_reset   &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans
 &trans       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans
@@ -929,24 +1157,32 @@
         brackets_layer {
             display-name = "brackets_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bkt_1            &bkt_2  &bkt_3             &bkt_4  &bkt_5             &bkt_6  &bkt_7  &bkt_8  &bkt_9        &bkt_10      &bkt_11  &bkt_12
+&trans  &trans            &trans  &bkt_f             &bkt_p  &bkt_b             &bkt_j  &bkt_l  &trans  &trans        &trans       &trans   &trans
+&trans  &dt_bkt_a_bkt_aa  &trans  &dt_s_ss_dot       &trans  &bkt_g             &bkt_m  &bkt_n  &bkt_e  &td_i_ii_iii  &bkt_o       &trans   &trans
+&trans  &trans            &trans  &td_bkt_c_bkt_cth  &bkt_d  &dt_bkt_v_bkt_vic  &bkt_k  &bkt_h  &trans  &trans        &trans       &trans   &trans
+&trans  &trans            &trans  &trans             &trans                     &trans  &trans  &trans  &trans        &kp LC(F23)  &trans   &kp LC(F24)
             >;
-
-            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
         spacing-layer {
             display-name = "spacing_layer";
             bindings = <
-&trans  &kp LC(F13)  &none   &kp LC(F14)  &none   &none   &kp LC(F15)  &none   &kp LC(F16)  &trans  &trans       &trans  &kp LC(F17)
-&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &kp LC(F18)  &trans  &trans       &trans  &kp LC(F19)
-&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans       &trans  &trans       &trans  &trans
-&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans       &trans  &trans       &trans  &trans
-&trans  &trans       &trans  &trans       &trans          &trans       &trans  &trans       &trans  &kp LC(F23)  &trans  &kp LC(F24)
+&trans  &kp LC(F13)  &none   &kp LC(F14)  &none   &none   &kp LC(F15)  &none   &kp LC(F16)  &trans  &trans       &trans       &kp LC(F17)
+&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans       &trans  &trans       &kp LC(F18)  &kp LC(F19)
+&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans       &trans  &trans       &trans       &trans
+&trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans       &trans  &trans       &trans       &trans
+&trans  &trans       &trans  &trans       &trans          &trans       &trans  &trans       &trans  &kp LC(F23)  &trans       &kp LC(F24)
+            >;
+        };
+
+        Hotkey_layer {
+            bindings = <
+&kp TILDE                  &trans             &trans  &trans  &trans  &trans  &trans             &trans             &trans  &trans  &trans           &trans  &trans
+&fix_paras_in_copied_text  &trans             &trans  &trans  &trans  &trans  &trans             &kp LG(LC(LA(L)))  &trans  &trans  &unicode_emdash  &trans  &trans
+&trans                     &kp LG(LS(COMMA))  &trans  &trans  &trans  &trans  &kp LG(LC(LA(M)))  &trans             &trans  &trans  &trans           &trans  &dot_list
+&trans                     &kp LG(Z)          &trans  &trans  &trans  &trans  &trans             &kp LG(H)          &trans  &trans  &kp BACKSLASH    &trans  &num_dash_list
+&kp LEFT_GUI               &trans             &trans  &trans  &trans          &trans             &trans             &trans  &trans  &kp LC(F23)      &trans  &kp LC(F24)
             >;
         };
     };
