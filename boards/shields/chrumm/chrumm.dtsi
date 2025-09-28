@@ -2,14 +2,15 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include <solomon,ssd1306fb-common.yaml, i2c-device.yaml>
+//#include <solomon,ssd1306fb-common.yaml>
+//#include <i2c-device.yaml>
 
 
 / {
 chosen  {
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform;
-        zephyr,display = &oled;
+ //       zephyr,display = &oled;
 
     };
  
@@ -60,18 +61,18 @@ chosen  {
 	  };
 // **note - &pro_micro 10 is spare
 
-        oled: oled {
-        compatible = "solomon,ssd1306fb"
-        status = okay
-        reg = <&pro_micro 0>,
-              <&pro_micro 1>;
-        segment-offset
-        page-offset
-        display-offset = COM0
-        multiplex-ratio
-        prechargep = 10
-        height = 64
-        width = 132
+//        oled: oled {
+ //       compatible = "solomon,ssd1306fb"
+ //       status = okay
+  //      reg = <&pro_micro 0>,
+  //            <&pro_micro 1>;
+  //      segment-offset
+  //      page-offset
+ //       display-offset = COM0
+  //      multiplex-ratio
+  //      prechargep = 10
+ //       height = 64
+  //      width = 132
 
       }
 

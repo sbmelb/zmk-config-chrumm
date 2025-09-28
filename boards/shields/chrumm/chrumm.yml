@@ -5,11 +5,11 @@ name: chrumm
 type: shield
 url: 
 requires: [nice_nano_v2]
-exposes: [i2c_oled]
+#exposes: [i2c_oled]
 features:
   - keys
   - encoder
-  - i2c_oled
+#  - display
 #siblings:
  # - zodiark_left
  # - zodiark_right
