@@ -2,17 +2,21 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include <solomon,ssd1306fb-common.yaml>
+#include <i2c-device.yaml>
+
 
 / {
 chosen  {
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform;
+        zephyr,display = &oled;
 
     };
  
 
 
-	  transform: matrix_transform_0 {
+	transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
         rows = <5>;
         columns = <13>;
@@ -28,48 +32,67 @@ chosen  {
 
 
 
-    kscan: kscan {
+      kscan: kscan {
       compatible = "zmk,kscan-gpio-matrix";
       label = "KSCAN";
       diode-direction = "col2row";
 
-      row-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                 // <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                  <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+      row-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                  <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                  //<&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                   <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                   <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                   <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; 
 
 
-      col-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 15 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 18 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 19 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 20 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 21 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 2 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 3 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 4 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 5 (GPIO_ACTIVE_HIGH)>, 
+      col-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, 
                   <&pro_micro 6 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, 
-                  <&pro_micro 8 (GPIO_ACTIVE_HIGH)>;             
+                  <&pro_micro 5 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 4 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 3 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 2 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 21 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 20 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 19 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 18 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 15 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
+                  <&pro_micro 16 (GPIO_ACTIVE_HIGH)>;
 	  };
+// **note - &pro_micro 10 is spare
+
+        oled: oled {
+        compatible = "solomon,ssd1306fb"
+        status = okay
+        reg = <&pro_micro 0>,
+              <&pro_micro 1>;
+        segment-offset
+        page-offset
+        display-offset = COM0
+        multiplex-ratio
+        prechargep = 10
+        height = 64
+        width = 132
+
+      }
 
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <72>;
-        status = "disabled";
-    };
 
-	sensors: sensors {
-		compatible = "zmk,keymap-sensors"; 
-		sensors = <&left_encoder>;
-		triggers-per-rotation = <24>;
-		};
+
+//    left_encoder: encoder_left {
+//        compatible = "alps,ec11";
+ //       a-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//        b-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//        steps = <72>;
+ //       status = "disabled";
+ //   };
+
+//	sensors: sensors {
+//		compatible = "zmk,keymap-sensors"; 
+//		sensors = <&left_encoder>;
+//		triggers-per-rotation = <24>;
+//		};
+
   };
 
 
