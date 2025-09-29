@@ -1,6 +1,6 @@
 if SHIELD_CHRUMM
 
 config ZMK_KEYBOARD_NAME
-    default "Chrumm"
+    default "Custon1"
 
 endif
