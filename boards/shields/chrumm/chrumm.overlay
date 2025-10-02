@@ -23,10 +23,8 @@
         com-invdir;
         inversion-on;
         prechargep = <0x22>;
-    };
 
-&oled {
-    status = "okay";
+
     output-gpios = <pro_micro 0>,
                    <pro_micro 1>;
     };
