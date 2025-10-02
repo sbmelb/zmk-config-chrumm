@@ -16,6 +16,6 @@ manifest:
 #      revision: main  
 #    - name: zmk-config
 #      remote: englmaxi
-/#      revision: master  
+#      revision: master  
   self:
     path: config
