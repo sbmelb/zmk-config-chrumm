@@ -2,15 +2,12 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-//#include <solomon,ssd1306fb-common.yaml>
-//#include <i2c-device.yaml>
 
 
 / {
 chosen  {
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform;
- //       zephyr,display = &oled;
 
     };
  
@@ -61,19 +58,6 @@ chosen  {
 	  };
 // **note - &pro_micro 10 is spare
 
-//        oled: oled {
- //       compatible = "solomon,ssd1306fb"
- //       status = okay
-  //      reg = <&pro_micro 0>,
-  //            <&pro_micro 1>;
-  //      segment-offset
-  //      page-offset
- //       display-offset = COM0
-  //      multiplex-ratio
-  //      prechargep = 10
- //       height = 64
-  //      width = 132
-//      }
 
 
 
@@ -83,7 +67,11 @@ chosen  {
  //       a-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 //        b-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 //        steps = <72>;
- //       status = "disabled";
+ //       status = "okay";
+                // *note - originally set to "disabled" in this file (.dtsi) and "okay" in the overlay file (.overlay)
+                // I changed it - because I could see no logical reason for the original code
+                // * this version is untested - need to see if it actually works.
+                // ** note - the encoder needs a hardware filter (see datasheet) to work properly (I think).
  //   };
 
 //	sensors: sensors {
