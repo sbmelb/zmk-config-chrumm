@@ -24,10 +24,10 @@
         inversion-on;
         prechargep = <0x22>;
 
-        gpios: gpios {
-            output-gpios = <pro_micro 0>,
-                           <pro_micro 1>;
-        };
+  //      gpios: gpios {
+  //          output-gpios = <pro_micro 0>,
+   //                        <pro_micro 1>;
+  //      };
     };
 };
 
