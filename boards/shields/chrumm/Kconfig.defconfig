@@ -3,10 +3,12 @@ if SHIELD_CHRUMM
 config ZMK_KEYBOARD_NAME
     default "Chrumm"
 
+endif
+
 #if ZMK_DISPLAY
 
 #config I2C
-    default y
+ #   default y
 
 #choice ZMK_DISPLAY_WORK_QUEUE
 #    default  ZMK_DISPLAY_WORK_QUEUE_DEDICATED
