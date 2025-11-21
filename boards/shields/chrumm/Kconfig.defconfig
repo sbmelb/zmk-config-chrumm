@@ -3,6 +3,9 @@ if SHIELD_CHRUMM
 config ZMK_KEYBOARD_NAME
     default "Chrumm"
 
+config SPI
+    default y
+
 endif
 
 #if ZMK_DISPLAY
