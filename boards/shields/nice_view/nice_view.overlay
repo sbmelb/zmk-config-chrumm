@@ -1,7 +1,8 @@
-// see zmk 'pin control' page - pin control is needed to set up an spi bus (and a i2c & serial bus)
-//     needed for display interfaces and shift-registers
-//     must be installed as a 'board' - using an '.overlay' file in a boards/shields/boards folder.
-
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
 &nice_view_spi {
     status = "okay";
@@ -22,4 +23,3 @@
         zephyr,display = &nice_view;
     };
 };
-
