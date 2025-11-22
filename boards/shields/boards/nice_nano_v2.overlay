@@ -20,7 +20,7 @@
 
 
 nice_view_spi: nice_view_spi {
-&nice_view_spi {
+//&nice_view_spi {
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&nice_view_spi_default>;
     pinctrl-1 = <&nice_view_spi_sleep>;
