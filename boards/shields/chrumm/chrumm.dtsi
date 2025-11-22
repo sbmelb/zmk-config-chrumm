@@ -54,9 +54,6 @@ chosen  {
                   <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
                   <&pro_micro 16 (GPIO_ACTIVE_HIGH)>;
 	  };
-// **note - &pro_micro 10 is spare
-
-
 
 
 
