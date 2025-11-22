@@ -33,14 +33,15 @@ chosen  {
       label = "KSCAN";
       diode-direction = "col2row";
 
-      row-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                  <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
-                  <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+      row-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   //  ** note - '&pro_micro 8' refers to the 'digital pin number (ie. 'D8') - it i also possible to use the 'gpio' number - in this case the gpio number is 'P1.04' - coded as '&gpio1 4...'
+                  <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   //      ** also note - gpio0 and gpio1 - i think this means that the nicenano (and clone) use two gpio headers 
+                  <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,       //          - see '&pro_micro 7' below - for an example of gpio0
                   <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                   <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; 
 
 
-      col-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, 
+      col-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, //  ** note - '&pro_micro 7' refers to the 'digital pin number (ie. 'D7') - it i also possible to use the 'gpio' number - in this case the gpio number is 'P0.11' - coded as '&gpio0 11...'
+                  <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                   <&pro_micro 6 (GPIO_ACTIVE_HIGH)>, 
                   <&pro_micro 5 (GPIO_ACTIVE_HIGH)>, 
                   <&pro_micro 4 (GPIO_ACTIVE_HIGH)>, 
