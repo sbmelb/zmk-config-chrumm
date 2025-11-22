@@ -1,11 +1,11 @@
 // see zmk 'pin control' page - pin comtrol is needed to set up an spi bus (and a i2c & serial bus)
 //     needed for display interfaces and shift-registers
 
-&pro_micro_spi {
-    status = "okay";
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
-    sci-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-    mosi-gpios =  <&pro_micro 2 GPIO_ACTIVE_LOW>;
+//&pro_micro_spi {
+  //  status = "okay";
+ //   cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
+  //  sci-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+  //  mosi-gpios =  <&pro_micro 2 GPIO_ACTIVE_LOW>;
 
 //    shifter: 595@0 {
  //       compatible = "zmk,gpio-595";
@@ -51,4 +51,7 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
+    sci-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+    mosi-gpios =  <&pro_micro 2 GPIO_ACTIVE_LOW>;
 };
