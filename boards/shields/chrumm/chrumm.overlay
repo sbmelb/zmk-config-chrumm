@@ -1,5 +1,24 @@
 #include "chrumm.dtsi"
 
+&pro_micro_spi {
+    status = "okay";
+    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
+    sci-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+    mosi-gpios =  <&pro_micro 2 GPIO_ACTIVE_LOW>;
+
+//    shifter: 595@0 {
+ //       compatible = "zmk,gpio-595";
+//        status = "okay";
+ //       gpio-controller;
+ //       spi-max-frequency = <200000>;
+  //      reg = <0>;
+   //     #gpio-cells = <2>;
+ //       ngpios = <8>;
+    };
+};
+
+
+
 
 //  / {
  //   chosen {
