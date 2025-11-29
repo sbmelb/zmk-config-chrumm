@@ -78,7 +78,7 @@ chosen  {
 //      - saved for future reference
 
 
-        mid_encoder: mid_encoder {
+        mid_encoder: encoder_mid {
         status = "okay";
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
