@@ -1,34 +1,33 @@
 #include "chrumm.dtsi"
 
 
+&nice_view_spi {
+    status = "okay";
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+    shifter: 595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>; // * 400000 = 4 MHz -    ** originally set to 200000 = 2 MHz (capable of 8 MHz - see note below) - 
+        reg = <0>;
+        #gpio-cells = <2>;
+        ngpios = <16>;
+    };
+};
 
 
 
-/// {
-// kscan: kscan {
-//      col-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 15 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 18 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 19 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 20 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 21 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 2 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 3 (GPIO_ACTIVE_HIGH)>, 
- //                 <&pro_micro 4 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 5 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 6 (GPIO_ACTIVE_HIGH)>, 
- //                 <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, 
- //                 <&pro_micro 8 (GPIO_ACTIVE_HIGH)>; 
-//        *** commented out - this array is now in the chrumm.dtsi file 
-//             ** retained as a reference - the kscan array (is this the correct word?) can be located in both/either the .overlay and .dtsi files
+          // *If you have daisy chained multiple shift registers, you'll also want to increase the number of GPIOs that the shift register provides by editing the ngpios node - set this to your number of output pins (should be one of 8, 16, 24, 32). 
+          //   * You may also need to increase spi-max-frequency to a higher value if you have daisy chained shift registers, otherwise quick key presses may on occasion not trigger.
+          //      - ** The nRF52840 has three low-speed SPI peripherals, SPIM0, SPIM1, and SPIM2 - and one high-speed SPI peripheral, SPIM3. 
+          //           - SPIM0, SPIM1 and SPIM2 have a maximum clock rate of 8 MHz, 
+          //           - SPIM3 has a maximum clock rate of 32 MHz. 
+          //           
+          //  ** note - nice_view_spi uses SPIM0.
+          //          - pro_micro_spi uses ??not known yet??
 
-//    };
-//};
 
-//&left_encoder {
-//    status = "okay";
-//};
-//  ** moved to the chrumm.dtsi file
+
 
 
 
