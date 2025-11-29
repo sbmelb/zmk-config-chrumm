@@ -1,7 +1,7 @@
 #include "chrumm.dtsi"
 
 
-&pro_micro_spi: {
+595_spi: &pro_micro_spi: {
     status = "okay";
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
     shifter: 595@0 {
@@ -17,7 +17,9 @@
           //      - ** The nRF52840 has three low-speed SPI peripherals, SPIM0, SPIM1, and SPIM2 - and one high-speed SPI peripheral, SPIM3. 
           //           - SPIM0, SPIM1 and SPIM2 have a maximum clock rate of 8 MHz, 
           //           - SPIM3 has a maximum clock rate of 32 MHz. 
-          //              ** note - this 'function' uses the spi setup in the 'nice_nano_v2.overlay' file in the zmk nice_view_adapter (github files - imported by invoking 'nice_view' and 'nice_view_adapter' in the build.yaml file.
+          //           
+          //  ** note - nice_view_spi uses SPIM0.
+          //              - pro_micro_spi uses ??not known yet??
     };
 };
 
