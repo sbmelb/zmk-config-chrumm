@@ -1,14 +1,15 @@
 #include "chrumm.dtsi"
 
 
-595_spi = &pro_micro_spi; 
+//595_spi = &pro_micro_spi; 
+&pro_micro_spi {
     status = "okay";
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
     shifter: 595@0 {
         compatible = "zmk,gpio-595";
         status = "okay";
         gpio-controller;
-        spi-max-frequency = <400000>; // * 400000 = 4 MHz -    ** originally set to 200000 = 2 MHz (capable of 8 MHz - see note below) - 
+        spi-max-frequency = <200000>; // * 400000 = 4 MHz -    ** originally set to 200000 = 2 MHz (capable of 8 MHz - see note below) - 
         reg = <0>;
         #gpio-cells = <2>;
         ngpios = <8>;
@@ -19,7 +20,7 @@
           //           - SPIM3 has a maximum clock rate of 32 MHz. 
           //           
           //  ** note - nice_view_spi uses SPIM0.
-          //              - pro_micro_spi uses ??not known yet??
+          //          - pro_micro_spi uses ??not known yet??
     };
 };
 
