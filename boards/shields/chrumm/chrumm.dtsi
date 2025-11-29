@@ -78,7 +78,7 @@ chosen  {
 //      - saved for future reference
 
 
-        mid_encoder: encoder_mid {
+    left_encoder: encoder_left {
         status = "okay";
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -94,7 +94,7 @@ chosen  {
 
         sensors: sensors {
         compatible = "zmk,keymap-sensors"; 
-        sensors = <&mid_encoder>;
+        sensors = <&left_encoder>;
         triggers-per-rotation = <24>;
     };
 
