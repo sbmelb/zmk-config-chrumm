@@ -78,12 +78,12 @@ chosen  {
 //      - saved for future reference
 
 
-        left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <72>;
+        encoder: encoder {
         status = "okay";
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <72>;
     };
 // *note - originally set to "disabled" in this file (.dtsi) and "okay" in the overlay file (.overlay)
 // I changed it - because I could see no logical reason for the original code
@@ -94,7 +94,7 @@ chosen  {
 
         sensors: sensors {
         compatible = "zmk,keymap-sensors"; 
-        sensors = <&left_encoder>;
+        sensors = <&encoder>;
         triggers-per-rotation = <24>;
     };
 
