@@ -4,8 +4,8 @@
 
 
 
-/ {
- kscan: kscan {
+/// {
+// kscan: kscan {
 //      col-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
 //                  <&pro_micro 15 (GPIO_ACTIVE_HIGH)>, 
 //                  <&pro_micro 18 (GPIO_ACTIVE_HIGH)>, 
@@ -22,8 +22,8 @@
 //        *** commented out - this array is now in the chrumm.dtsi file 
 //             ** retained as a reference - the kscan array (is this the correct word?) can be located in both/either the .overlay and .dtsi files
 
-    };
-};
+//    };
+//};
 
 //&left_encoder {
 //    status = "okay";
