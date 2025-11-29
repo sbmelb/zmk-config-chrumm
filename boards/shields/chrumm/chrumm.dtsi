@@ -27,55 +27,26 @@ chosen  {
         label = "KSCAN";
         diode-direction = "col2row";
 
-        row-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   //  ** note - '&pro_micro 8' refers to the 'digital pin number (ie. 'D8') - it i also possible to use the 'gpio' number - in this case the gpio number is 'P1.04' - coded as '&gpio1 4...'
-                    <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,   //      ** also note - gpio0 and gpio1 - i think this means that the nicenano (and clone) use two gpio headers 
-                    <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,       //          - see '&pro_micro 7' below - for an example of gpio0
+        row-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
+                    <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                     <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; 
 
-        col-gpios = <&shifter 7 GPIO_ACTIVE_HIGH>, // col 0- 'left-most' column when viewed from the top
-                    <&shifter 6 GPIO_ACTIVE_HIGH>, // col 1
-                    <&shifter 5 GPIO_ACTIVE_HIGH>, // col 2
-                    <&shifter 4 GPIO_ACTIVE_HIGH>, // col 3
-                    <&shifter 3 GPIO_ACTIVE_HIGH>, // col 4
-                    <&shifter 2 GPIO_ACTIVE_HIGH>, // col 5
-                    //  centre section                  
-                    <&shifter 14 GPIO_ACTIVE_HIGH>, // col 6 - left-most column of right side - when viewed from the top
-                    <&shifter 13 GPIO_ACTIVE_HIGH>, // col 7 
-                    <&shifter 12 GPIO_ACTIVE_HIGH>, // col 8
-                    <&shifter 11 GPIO_ACTIVE_HIGH>, // col 9
-                    <&shifter 10 GPIO_ACTIVE_HIGH>, // col 10
-                    <&shifter 9 GPIO_ACTIVE_HIGH>, // col 11
-                    <&shifter 8 GPIO_ACTIVE_HIGH>; // col 12
-// ** note - pinout for 74HC595....
-//      - QA = 'shifter 0'
-//      - QB = 'shifter 1' and so on...
-//      - QH = 'shifter 7'
-//    ** for second Shift Register.....
-//         - QA = 'shifter 8
-//         - QB = 'shifter 9 and so on....
-//         - QH = 'shifter 15'
-//     *** <&shifter 0 ...> is empty
-//         <&shifter 1 ...> is empty
-//         <&shifter 15 ...> is empty
+        col-gpios = <&shifter 7 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 6 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 5 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 4 GPIO_ACTIVE_HIGH>,
+                    <&shifter 3 GPIO_ACTIVE_HIGH>,
+                    <&shifter 2 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 14 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 13 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 12 GPIO_ACTIVE_HIGH>,
+                    <&shifter 11 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 10 GPIO_ACTIVE_HIGH>,
+                    <&shifter 9 GPIO_ACTIVE_HIGH>, 
+                    <&shifter 8 GPIO_ACTIVE_HIGH>;
 
-
-//      col-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH)>, //  ** note - '&pro_micro 7' refers to the 'digital pin number (ie. 'D7') - it i also possible to use the 'gpio' number - in this case the gpio number is 'P0.11' - coded as '&gpio0 11...'
-//                  <&pro_micro 6 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 5 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 4 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 0 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 10 (GPIO_ACTIVE_HIGH)>,
-//                  <&pro_micro 21 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 20 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 19 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 18 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 15 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 14 (GPIO_ACTIVE_HIGH)>, 
-//                  <&pro_micro 16 (GPIO_ACTIVE_HIGH)>;
-//	  }; 
-// ** this was the column 'array' before installing the shift registers
-//      - saved for future reference
 
 
     left_encoder: encoder_left {
@@ -85,13 +56,6 @@ chosen  {
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <72>;
     };
-
-// *note - originally set to "disabled" in this file (.dtsi) and "okay" in the overlay file (.overlay)
-// I changed it - because I could see no logical reason for the original code
-// * this version is untested - need to see if it actually works.
-
-// *** note - the encoder needs a hardware filter (see datasheet) to work properly (I think).
-
 
         sensors: sensors {
         compatible = "zmk,keymap-sensors"; 
