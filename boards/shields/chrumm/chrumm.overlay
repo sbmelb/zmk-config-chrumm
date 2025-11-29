@@ -1,7 +1,7 @@
 #include "chrumm.dtsi"
 
 
-&nice_view_spi: {
+&pro_micro_spi: {
     status = "okay";
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
     shifter: 595@0 {
