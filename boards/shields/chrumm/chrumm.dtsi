@@ -78,13 +78,14 @@ chosen  {
 //      - saved for future reference
 
 
-    left_encoder: encoder_left {
-        status = "okay";
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <72>;
-    };
+//    left_encoder: encoder_left {
+//        status = "okay";
+//        compatible = "alps,ec11";
+ //       a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+//        steps = <72>;
+//    };
+
 // *note - originally set to "disabled" in this file (.dtsi) and "okay" in the overlay file (.overlay)
 // I changed it - because I could see no logical reason for the original code
 // * this version is untested - need to see if it actually works.
@@ -92,12 +93,13 @@ chosen  {
 // *** note - the encoder needs a hardware filter (see datasheet) to work properly (I think).
 
 
-        sensors: sensors {
-        compatible = "zmk,keymap-sensors"; 
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <24>;
-    };
+//        sensors: sensors {
+//        compatible = "zmk,keymap-sensors"; 
+//        sensors = <&left_encoder>;
+//        triggers-per-rotation = <24>;
+ //   };
 
+};
 };
 
 
