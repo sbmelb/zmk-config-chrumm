@@ -4,7 +4,6 @@
 &pro_micro_spi {
     status = "okay";
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-    
     shifter: 595@0 {
         compatible = "zmk,gpio-595";
         status = "okay";
@@ -12,7 +11,7 @@
         spi-max-frequency = <200000>; // * 400000 = 4 MHz -    ** originally set to 200000 = 2 MHz (capable of 8 MHz - see note below) - 
         reg = <0>;
         #gpio-cells = <2>;
-        ngpios = <8>;
+        ngpios = <16>;
     };
 };
 
