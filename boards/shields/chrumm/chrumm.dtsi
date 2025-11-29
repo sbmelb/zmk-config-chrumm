@@ -46,7 +46,7 @@ chosen  {
                     <&shifter 11 GPIO_ACTIVE_HIGH>, // col 9
                     <&shifter 10 GPIO_ACTIVE_HIGH>, // col 10
                     <&shifter 9 GPIO_ACTIVE_HIGH>, // col 11
-                    <&shifter 8 GPIO_ACTIVE_HIGH>, // col 12
+                    <&shifter 8 GPIO_ACTIVE_HIGH>; // col 12
 // ** note - pinout for 74HC595....
 //      - QA = 'shifter 0'
 //      - QB = 'shifter 1' and so on...
@@ -78,13 +78,13 @@ chosen  {
 //      - saved for future reference
 
 
-//    left_encoder: encoder_left {
-//        status = "okay";
-//        compatible = "alps,ec11";
- //       a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//        steps = <72>;
-//    };
+    left_encoder: encoder_left {
+        status = "okay";
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <72>;
+    };
 
 // *note - originally set to "disabled" in this file (.dtsi) and "okay" in the overlay file (.overlay)
 // I changed it - because I could see no logical reason for the original code
@@ -93,13 +93,13 @@ chosen  {
 // *** note - the encoder needs a hardware filter (see datasheet) to work properly (I think).
 
 
-//        sensors: sensors {
-//        compatible = "zmk,keymap-sensors"; 
-//        sensors = <&left_encoder>;
-//        triggers-per-rotation = <24>;
- //   };
+        sensors: sensors {
+        compatible = "zmk,keymap-sensors"; 
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <24>;
+    };
 
 };
-};
+
 
 
