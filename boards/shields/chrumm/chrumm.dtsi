@@ -45,19 +45,19 @@
         /* Column pins via 74HC595 shift-register chain:
          *   Two 595s daisy-chained → 16 outputs, using 13 of them.
          */
-        col-gpios = <&shifter  7 GPIO_ACTIVE_HIGH>, /* col  0 */
-                    <&shifter  6 GPIO_ACTIVE_HIGH>, /* col  1 */
-                    <&shifter  5 GPIO_ACTIVE_HIGH>, /* col  2 */
-                    <&shifter  4 GPIO_ACTIVE_HIGH>, /* col  3 */
-                    <&shifter  3 GPIO_ACTIVE_HIGH>, /* col  4 */
-                    <&shifter  2 GPIO_ACTIVE_HIGH>, /* col  5 */
-                    <&shifter 14 GPIO_ACTIVE_HIGH>, /* col  6 */
-                    <&shifter 13 GPIO_ACTIVE_HIGH>, /* col  7 */
-                    <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  8 */
-                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  9 */
-                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col 10 */
-                    <&shifter  9 GPIO_ACTIVE_HIGH>, /* col 11 */
-                    <&shifter  8 GPIO_ACTIVE_HIGH>; /* col 12 */
+//        col-gpios = <&shifter  7 GPIO_ACTIVE_HIGH>, /* col  0 */
+//                    <&shifter  6 GPIO_ACTIVE_HIGH>, /* col  1 */
+//                    <&shifter  5 GPIO_ACTIVE_HIGH>, /* col  2 */
+//                    <&shifter  4 GPIO_ACTIVE_HIGH>, /* col  3 */
+//                    <&shifter  3 GPIO_ACTIVE_HIGH>, /* col  4 */
+//                    <&shifter  2 GPIO_ACTIVE_HIGH>, /* col  5 */
+//                    <&shifter 14 GPIO_ACTIVE_HIGH>, /* col  6 */
+//                    <&shifter 13 GPIO_ACTIVE_HIGH>, /* col  7 */
+//                    <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  8 */
+//                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  9 */
+//                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col 10 */
+//                    <&shifter  9 GPIO_ACTIVE_HIGH>, /* col 11 */
+//                    <&shifter  8 GPIO_ACTIVE_HIGH>; /* col 12 */
     };
 
     left_encoder: encoder_left {
