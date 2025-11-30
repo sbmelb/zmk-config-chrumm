@@ -1,19 +1,31 @@
 /* SOFTWARE SPI DEFINITIONS FOR CHRUMM SHIELD */
 
-&pro_micro {
-    /* Software SPI bus for nice!view LCD */
-    spi_view: spi_view {
-        compatible = "zephyr,spi-emul";
-        sck-gpios  = <&pro_micro 2 GPIO_ACTIVE_HIGH>;  /* D2 → SCLK */
-        mosi-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;  /* D3 → SI */
-        cs-gpios   = <&pro_micro 1 GPIO_ACTIVE_LOW>;   /* D1 → CS */
+ / {
+    spi_view: spi_view_bus {
+        compatible = "spi-bitbang";
+        status = "okay";
+
+        sck-gpios =   <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+        mosi-gpios =  <&pro_micro 3 GPIO_ACTIVE_HIGH>;
+        miso-gpios =  <&pro_micro 7 GPIO_ACTIVE_HIGH>; /* niceview MISO if present */
+
+        cs-gpios =    <&pro_micro 1 GPIO_ACTIVE_LOW>;
+
+        #address-cells = <1>;
+        #size-cells = <0>;
     };
 
-    /* Software SPI bus for the 74HC595 chain */
-    spi_595: spi_595 {
-        compatible = "zephyr,spi-emul";
-        sck-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>;  /* D4 → SRCLK */
-        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  /* D0 → SER */
-        cs-gpios   = <&pro_micro 5 GPIO_ACTIVE_LOW>;   /* D5 → RCLK (latch) */
+    spi_595: spi_595_bus {
+        compatible = "spi-bitbang";
+        status = "okay";
+
+        sck-gpios =   <&pro_micro 4 GPIO_ACTIVE_HIGH>;  /* shift register clock */
+        mosi-gpios =  <&pro_micro 0 GPIO_ACTIVE_HIGH>;  /* SER */
+        miso-gpios =  <&pro_micro 6 GPIO_ACTIVE_HIGH>;  /* unused but required */
+
+        cs-gpios =    <&pro_micro 5 GPIO_ACTIVE_LOW>;   /* latch (RCLK) */
+
+        #address-cells = <1>;
+        #size-cells = <0>;
     };
 };
