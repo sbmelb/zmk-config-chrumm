@@ -7,9 +7,8 @@
 
         clk-gpios  = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
         mosi-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-        miso-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>; /* niceview MISO (if used) */
-
-        cs-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;    /* niceview CS */
+        miso-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+        cs-gpios   = <&pro_micro 1 GPIO_ACTIVE_LOW>;
 
         #address-cells = <1>;
         #size-cells = <0>;
@@ -19,13 +18,25 @@
         compatible = "zephyr,spi-bitbang";
         status = "okay";
 
-        clk-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>; /* shift register CLK */
-        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; /* SER / data in */
-        miso-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>; /* unused but required */
-
-        cs-gpios = <&pro_micro 5 GPIO_ACTIVE_LOW>;    /* latch (RCLK) */
+        clk-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+        miso-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>;
+        cs-gpios   = <&pro_micro 5 GPIO_ACTIVE_LOW>;
 
         #address-cells = <1>;
         #size-cells = <0>;
+
+        shifter: gpio_595@0 {
+            compatible = "zmk,gpio-595";
+            status = "okay";
+
+            reg = <0>;
+            spi-max-frequency = <200000>;
+
+            gpio-controller;
+            #gpio-cells = <2>;
+            ngpios = <16>;
+        };
     };
 };
+
