@@ -1,7 +1,7 @@
 /* SOFTWARE SPI DEFINITIONS FOR CHRUMM SHIELD */
 
  / {
-    spi_view: spi_view_bus {
+    spi_view_bus: spi_view_bus {
         compatible = "zephyr,spi-bitbang";
         status = "okay";
 
@@ -15,7 +15,7 @@
         #size-cells = <0>;
     };
 
-    spi_595: spi_595_bus {
+    spi_595_bus: spi_595_bus {
         compatible = "zephyr,spi-bitbang";
         status = "okay";
 
