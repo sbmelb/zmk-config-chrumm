@@ -1,16 +1,20 @@
 &pro_micro_spi {
     status = "okay";
 
-    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_LOW>;
-
-    shifter: 595@0 {
+    /* Attach the 74HC595 chain as a child SPI device.
+     * Move cs-gpios onto the child so we don't override
+     * whatever cs-gpios the nice_view_adapter uses.
+     */
+    shifter: gpio_595@0 {
         compatible = "zmk,gpio-595";
-        gpio-controller;
-        #gpio-cells = <2>;
         reg = <0>;
         spi-max-frequency = <200000>;
+
+        /* Chip select for the 595 chain – adjust pin if needed */
+        cs-gpios = <&pro_micro 4 GPIO_ACTIVE_LOW>;
+
+        gpio-controller;
+        #gpio-cells = <2>;
         ngpios = <16>;
     };
 };
-
-
