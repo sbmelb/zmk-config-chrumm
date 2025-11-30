@@ -60,7 +60,7 @@
 //                    <&shifter  9 GPIO_ACTIVE_HIGH>, /* col 11 */
 //                    <&shifter  8 GPIO_ACTIVE_HIGH>; /* col 12 */
     };
-test
+
     left_encoder: encoder_left {
         status = "okay";
         compatible = "alps,ec11";
