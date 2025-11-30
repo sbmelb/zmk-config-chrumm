@@ -20,7 +20,7 @@
         >;
     };
 
-&spi_595_bus {
+&spi_595 {
         status = "okay";
 
         shifter: gpio_595@0 {
