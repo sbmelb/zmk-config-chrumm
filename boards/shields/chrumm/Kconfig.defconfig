@@ -10,11 +10,6 @@ config ZMK_DISPLAY
     bool "Enable ZMK display"
     default y
 
-# Use the built-in generic status screen for now
-config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-    bool "Built-in status screen"
-    default y
-
 # Basic LVGL settings (you can tweak later)
 config LV_Z_BITS_PER_PIXEL
     int
