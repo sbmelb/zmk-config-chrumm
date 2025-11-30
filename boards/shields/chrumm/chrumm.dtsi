@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
- / {
+/ {
     chosen {
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform;
@@ -19,26 +19,6 @@
             RC(4, 0) RC(4, 1) RC(4, 2) RC(4, 3) RC(4, 4) RC(4, 5) RC(4, 6) RC(4, 7) RC(4, 8) RC(4, 9) RC(4,10) RC(4,11) RC(4,12)
         >;
     };
-
-    /* ****************************************************
-     *   ADD THE SHIFTER BLOCK HERE
-     * ****************************************************/
-
-    &spi_595 {
-        status = "okay";
-
-        shifter: gpio_595@0 {
-            compatible = "zmk,gpio-595";
-            reg = <0>;
-            spi-max-frequency = <200000>;
-
-            gpio-controller;
-            #gpio-cells = <2>;
-            ngpios = <16>;
-        };
-    };
-
-    /* ****************************************************/
 
     kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
