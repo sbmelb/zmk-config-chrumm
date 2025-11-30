@@ -1,27 +1,46 @@
-/* SOFTWARE SPI DEFINITIONS FOR CHRUMM SHIELD */
+/* chrumm — nice_nano_v2 overlay
+ * Defines two software SPI buses:
+ *  - spi_view_bus : for nice!view display (D1, D2, D3)
+ *  - spi_595_bus  : for 74HC595 chain (D0, D4, D5)
+ */
 
  / {
+    /* Software SPI bus for nice!view */
     spi_view_bus: spi_view_bus {
         compatible = "zephyr,spi-bitbang";
         status = "okay";
 
-        clk-gpios  = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
-        mosi-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-        miso-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
-        cs-gpios   = <&pro_micro 1 GPIO_ACTIVE_LOW>;
+        /* nice!view wiring:
+         *   CS  → D1
+         *   SCK → D2
+         *   MOSI→ D3
+         *   (MISO not used)
+         */
+        clk-gpios  = <&pro_micro 2 GPIO_ACTIVE_HIGH>;  /* D2: SCK */
+        mosi-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;  /* D3: MOSI */
+        miso-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;  /* unused, but required */
+
+        cs-gpios   = <&pro_micro 1 GPIO_ACTIVE_LOW>;   /* D1: CS */
 
         #address-cells = <1>;
         #size-cells = <0>;
     };
 
+    /* Software SPI bus for 74HC595 chain */
     spi_595_bus: spi_595_bus {
         compatible = "zephyr,spi-bitbang";
         status = "okay";
 
-        clk-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
-        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-        miso-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>;
-        cs-gpios   = <&pro_micro 5 GPIO_ACTIVE_LOW>;
+        /* 595 wiring:
+         *   SER  → D0
+         *   SRCLK→ D4
+         *   RCLK → D5 (latch)
+         */
+        clk-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>;  /* D4: shift clock */
+        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  /* D0: SER */
+        miso-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>;  /* unused, but required */
+
+        cs-gpios   = <&pro_micro 5 GPIO_ACTIVE_LOW>;   /* D5: latch (RCLK) */
 
         #address-cells = <1>;
         #size-cells = <0>;
@@ -30,12 +49,12 @@
             compatible = "zmk,gpio-595";
             status = "okay";
 
-            reg = <0>;
+            reg = <0>;                  /* first entry in cs-gpios */
             spi-max-frequency = <200000>;
 
             gpio-controller;
             #gpio-cells = <2>;
-            ngpios = <16>;
+            ngpios = <16>;              /* 2×74HC595 */
         };
     };
 };

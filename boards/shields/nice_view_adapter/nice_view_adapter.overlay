@@ -1,18 +1,12 @@
-/* Use software SPI bus for nice!view */
+/* nice_view_adapter.overlay — route nice_view over chrumm’s bitbanged bus
+ *
+ * This assumes:
+ *   - spi_view_bus is defined in chrumm/boards/nice_nano_v2.overlay
+ *   - nice_view_display node already exists in the base nice_view shield
+ *     and we’re just telling Zephyr: "this bus is active and OK".
+ */
 
-&spi_view {
+&spi_view_bus {
     status = "okay";
-
-    nice_view_display: nice_view_display@0 {
-        compatible = "sharp,ls0xx";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-
-        /* chip-select is handled in spi_view via cs-gpios */
-        /* no MISO needed for memory LCD */
-
-        /* nice_view specific pins normally defined here:
-           extcomin-gpios, disp-gpios, etc.
-           Leave them as-is from the default overlay. */
-    };
 };
+
