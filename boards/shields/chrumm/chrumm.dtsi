@@ -30,7 +30,7 @@
                     <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,                                        
+                    <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;                                        
 
         /* Column pins via shifter on spi_595_bus */
         col-gpios = <&shifter 6 GPIO_ACTIVE_HIGH>, /* col  0 */
