@@ -32,13 +32,14 @@
         status = "okay";
 
         /* 595 wiring:
-         *   SER  → D0
-         *   SRCLK→ D4
-         *   RCLK → D5 (latch)
+         *   SERIAL OUTPUT (MISO) → D0
+         *   SRCLK→ D5
+         *   RCLK → D6 (latch)
+         *   MISO → D4 (unused, but required)
          */
-        clk-gpios  = <&pro_micro 4 GPIO_ACTIVE_HIGH>;  /* D4: shift clock */
-        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  /* D0: SER */
-        miso-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>;  /* unused, but required */
+        clk-gpios  = <&pro_micro 6 GPIO_ACTIVE_HIGH>;  /* D5: shift clock */
+        mosi-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  /* D0: SERIAL OUT */
+        miso-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;  /* unused, but required */
 
         cs-gpios   = <&pro_micro 5 GPIO_ACTIVE_LOW>;   /* D5: latch (RCLK) */
 
