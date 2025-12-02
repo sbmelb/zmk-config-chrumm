@@ -44,7 +44,8 @@
                     <&shifter 8 GPIO_ACTIVE_HIGH>, /* col  8 */
                     <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  9 */
                     <&shifter 10 GPIO_ACTIVE_HIGH>, /* col 10 */
-                    <&shifter 11 GPItttttbGPIO_ACTIVE_HIGH>; /* col 12 */
+                    <&shifter 11 GPIO_ACTIVE_HIGH>; /* col 11 */
+                    <&shifter 11 GPIO_ACTIVE_HIGH>; /* col 12 */
     };
 
     left_encoder: encoder_left {
