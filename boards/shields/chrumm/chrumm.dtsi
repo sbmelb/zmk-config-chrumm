@@ -33,12 +33,12 @@
                     <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
         /* Column pins via shifter on spi_595_bus */
-        col-gpios = <&shifter 8 GPIO_ACTIVE_HIGH>, /* col  0 - Qa */ 
+        col-gpios = <&shifter 8 GPIO_ACTIVE_HIGH>, /* col  0 */ 
                     <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  1 */
                     <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  2 */
                     <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  3 */
                     <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  4 */
-                    <&shifter 13 GPIO_ACTIVE_HIGH>, /* col  5 */
+                    <&shifter 4 GPIO_ACTIVE_HIGH>, /* col  5 */
                     <&shifter 14 GPIO_ACTIVE_HIGH>, /* col  6 */
                     <&shifter 15 GPIO_ACTIVE_HIGH>, /* col  7 */
                     <&shifter 16 GPIO_ACTIVE_HIGH>, /* col  8 */
