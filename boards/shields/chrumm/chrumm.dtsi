@@ -33,19 +33,19 @@
                     <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
         /* Column pins via shifter on spi_595_bus */
-        col-gpios = <&shifter 6 GPIO_ACTIVE_HIGH>, /* col  0 */
-                    <&shifter 5 GPIO_ACTIVE_HIGH>, /* col  1 */
-                    <&shifter 4 GPIO_ACTIVE_HIGH>, /* col  2 */
-                    <&shifter 3 GPIO_ACTIVE_HIGH>, /* col  3 */
-                    <&shifter 3 GPIO_ACTIVE_HIGH>, /* col  4 */
-                    <&shifter 1 GPIO_ACTIVE_HIGH>, /* col  5 */
-                    <&shifter 7 GPIO_ACTIVE_HIGH>, /* col  6 */
-                    <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  7 */
-                    <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  8 */
-                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  9 */
-                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col 10 */
-                    <&shifter 12 GPIO_ACTIVE_HIGH>, /* col 11 */
-                    <&shifter 13 GPIO_ACTIVE_HIGH>; /* col 12 */
+        col-gpios = <&shifter 13 GPIO_ACTIVE_HIGH>, /* col  0 */  13
+                    <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  1 */12
+                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  2 */11
+                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  3 */10
+                    <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  4 */9
+                    <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  5 */0
+                    <&shifter 7 GPIO_ACTIVE_HIGH>, /* col  6 */7
+                    <&shifter 1 GPIO_ACTIVE_HIGH>, /* col  7 */1
+                    <&shifter 2 GPIO_ACTIVE_HIGH>, /* col  8 */2
+                    <&shifter 3 GPIO_ACTIVE_HIGH>, /* col  9 */3
+                    <&shifter 4 GPIO_ACTIVE_HIGH>, /* col 10 */4
+                    <&shifter 5 GPIO_ACTIVE_HIGH>, /* col 11 */5
+                    <&shifter 6 GPIO_ACTIVE_HIGH>; /* col 12 */6
     };
 
     left_encoder: encoder_left {
