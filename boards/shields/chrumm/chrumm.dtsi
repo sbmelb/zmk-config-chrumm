@@ -38,8 +38,8 @@
                     <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  2 */
                     <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  3 */
                     <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  4 */
-                    <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  5 */
-                    <&shifter 7 GPIO_ACTIVE_HIGH>, /* col  6 */
+                    <&shifter 7 GPIO_ACTIVE_HIGH>, /* col  5 */
+                    <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  6 */
                     <&shifter 1 GPIO_ACTIVE_HIGH>, /* col  7 */
                     <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  8 */
                     <&shifter 3 GPIO_ACTIVE_HIGH>, /* col  9 */
