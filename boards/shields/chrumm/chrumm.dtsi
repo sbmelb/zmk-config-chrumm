@@ -34,7 +34,7 @@
 
         /* Column pins via shifter on spi_595_bus */
         col-gpios = <&shifter 13 GPIO_ACTIVE_HIGH>, /* col  0 */ 
-                    <&shifter 2 GPIO_ACTIVE_HIGH>, /* col  1 */
+                    <&shifter 15 GPIO_ACTIVE_HIGH>, /* col  1 */
                     <&shifter 11 GPIO_ACTIVE_HIGH>, /* col  2 */
                     <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  3 */
                     <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  4 */
@@ -42,7 +42,7 @@
                     <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  6 */
                     <&shifter 1 GPIO_ACTIVE_HIGH>, /* col  7 */
                     <&shifter 12 GPIO_ACTIVE_HIGH>, /* col  8 */
-                    <&shifter 3 GPIO_ACTIVE_HIGH>, /* col  9 */
+                    <&shifter 2 GPIO_ACTIVE_HIGH>, /* col  9 */
                     <&shifter 4 GPIO_ACTIVE_HIGH>, /* col 10 */
                     <&shifter 5 GPIO_ACTIVE_HIGH>, /* col 11 */
                     <&shifter 6 GPIO_ACTIVE_HIGH>; /* col 12 */
