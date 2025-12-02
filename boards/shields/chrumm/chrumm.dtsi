@@ -41,11 +41,11 @@
                     <&shifter 1 GPIO_ACTIVE_HIGH>, /* col  5 */
                     <&shifter 7 GPIO_ACTIVE_HIGH>, /* col  6 */
                     <&shifter 0 GPIO_ACTIVE_HIGH>, /* col  7 */
-                    <&shifter 8 GPIO_ACTIVE_HIGH>, /* col  8 */
-                    <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  9 */
-                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col 10 */
-                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col 11 */
-                    <&shifter 12 GPIO_ACTIVE_HIGH>; /* col 12 */
+                    <&shifter 9 GPIO_ACTIVE_HIGH>, /* col  8 */
+                    <&shifter 10 GPIO_ACTIVE_HIGH>, /* col  9 */
+                    <&shifter 11 GPIO_ACTIVE_HIGH>, /* col 10 */
+                    <&shifter 12 GPIO_ACTIVE_HIGH>, /* col 11 */
+                    <&shifter 13 GPIO_ACTIVE_HIGH>; /* col 12 */
     };
 
     left_encoder: encoder_left {
